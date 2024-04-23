@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100vw;
+    height: 2.5em;
+    background-color: rgb(40, 74, 40);
+    color: whitesmoke;
+}
+
+.p {
+    font-family: "Comfortaa", sans-serif;
+    font-size: 13px;
+    color: whitesmoke;
+}
+
+.social {
+    margin-top: .2em;
+    margin-left: 65em;
+}
+
+.github {
+    margin-right: 1.2em;
+}
