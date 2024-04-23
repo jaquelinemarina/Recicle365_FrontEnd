@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    width: 100vw;
+    height: 3.3em;
+    background-color: rgb(40, 74, 40);
+}
+
+.dashboard,
+.listaLCR,
+.cadastroLCR {
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 14px;
+}
+
+
+.listaLCR {
+    margin-left: 55em;
+}
+
+.cadastroLCR {
+    margin-right: 1em;
+}
