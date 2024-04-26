@@ -1,6 +1,6 @@
 import style from './cadastroUser.module.css'
 import { useForm } from 'react-hook-form'
-// import React from 'react'
+import { usersContext } from '../../context/usersContext'
 
 function CadastroUser() {
 
@@ -12,8 +12,26 @@ function CadastroUser() {
     function onSubmit(formValue) {
         console.log("Formulário enviado", formValue)
 
-        //addUser({ ...formValue, cpf: Number(formValue.cpf), number: Number(formValue.number), cep: Number(formValue.cep)})
+        //addUser({ ...formValue, cpf: Number(formValue.cpf), number: Number(formValue.number), cep: Number(formValue.cep)})  ???
     }
+
+    const {registerUser} = useContext(usersContext)
+    const [newUser, setNewUser] = useState({ 
+        name: "",
+        cpf: "",
+        born: "",
+        sex: "",
+        email: "",
+        password: "",
+        cep: "",
+        address: "",
+        number: "",
+        neighborhood: "",
+        city: "",
+        state:"",
+    })
+    //preciso passar o value dentro do input? (ex: value={newUser.name} onChange={(e) => setNewUser({...newUser, name: e.target.value})}
+
 
     return (
         <div className={style.container}>
@@ -200,7 +218,7 @@ function CadastroUser() {
                     {errors?.state && <p>{errors.state.message}</p>}
                 </div>
 
-                <button className={style.btnRegister} type="submit">Cadastrar </button>
+                <button className={style.btnRegister} onClick={() => registerUser(newUser)}>Cadastrar </button>
             </form>
         </div>
     )
