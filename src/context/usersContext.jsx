@@ -1,8 +1,8 @@
 import { createContext, useEffect, useState } from 'react'
 
-export const usersContext = createContext()
+export const UsersContext = createContext()
 
-export const usersContextProvider = ({ children }) => {
+export const UsersContextProvider = ({ children }) => {
     const [users, setUsers] = useState([])
 
     //monitora o json de usuários cadastrados
@@ -11,7 +11,7 @@ export const usersContextProvider = ({ children }) => {
     }, [])
 
     useEffect(() => {
-        console.log({ users });
+  
     }, [users]);
 
     //fetch para buscar usuários no json
@@ -19,14 +19,15 @@ export const usersContextProvider = ({ children }) => {
         fetch("http://localhost:3000/users")
             .then((response) => response.json())
             .then((data) => setUsers(data))
-            .cath((error) => console.log(error));
+            .catch((error) => console.log(error));
     }
 
     //cadastrar novo usuário no json
     function registerUser(user) {
-        if (user.name == "") {  // o required do input não substitui essa parte ??
-            alert("Os dados estão incompletos!")
+        if (user.name === "") {  // o required do input não substitui essa parte ??
+            console.log('Dados incompletos.')
         }
+
         fetch('http://localhost:3000/users', {
             method: 'POST', //POST = adicionar
             body: JSON.stringify(user),
@@ -54,8 +55,8 @@ export const usersContextProvider = ({ children }) => {
     }
 
     return (
-        <usersContext.Provider value={{ users, registerUser, deleteUser }}>
+        <UsersContext.Provider value={{ users, registerUser, deleteUser }}>
             {children}
-        </usersContext.Provider>
+        </UsersContext.Provider>
     )
 }

@@ -1,10 +1,10 @@
 import { useContext } from 'react'
-import { usersContext } from '../../context/usersContext'
+import { UsersContext } from '../../context/usersContext'
 import style from './login.module.css'
 
 function Login() {
 
-    const { users, registerUser, removeUser } = useContext(usersContext)
+    const { users, registerUser, removeUser } = useContext(UsersContext)
 
     useContext(() => {
         console.log(users)

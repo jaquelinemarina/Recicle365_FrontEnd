@@ -1,6 +1,11 @@
 import style from './cadastroUser.module.css'
 import { useForm } from 'react-hook-form'
-import { usersContext } from '../../context/usersContext'
+import { UsersContext } from '../../context/usersContext'
+import { useContext, useState } from 'react'
+
+// --------------------------------------------------------------------------------------
+// -------- STATUS: tá enviando o formulário, mas no json as props ficam vazias ---------
+// --------------------------------------------------------------------------------------
 
 function CadastroUser() {
 
@@ -15,7 +20,7 @@ function CadastroUser() {
         //addUser({ ...formValue, cpf: Number(formValue.cpf), number: Number(formValue.number), cep: Number(formValue.cep)})  ???
     }
 
-    const {registerUser} = useContext(usersContext)
+    const {registerUser} = useContext(UsersContext)
     const [newUser, setNewUser] = useState({ 
         name: "",
         cpf: "",
