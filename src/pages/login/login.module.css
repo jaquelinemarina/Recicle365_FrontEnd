@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: top;
+    padding: 8em;;
+}
+
+.users{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+}
+
+.list {
+    color: black;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.email, .password {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+}
