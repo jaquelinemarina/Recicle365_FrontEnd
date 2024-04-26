@@ -2,9 +2,9 @@ import App from '../App'
 import { createBrowserRouter } from 'react-router-dom'
 
 //importação das páginas
-import dashboard from '../pages/dashboard'
-import listaLCR from '../pages/listaLCR'
-import cadastroLCR from '../pages/cadastroLCR'
+import Dashboard from '../pages/dashboard/Dashboard'
+import ListagemLCR from '../pages/listagemLCR/ListagemLCR'
+import CadastroLCR from '../pages/cadastroLCR/CadastroLCR'
 
 
 const routers = createBrowserRouter([
@@ -15,15 +15,15 @@ const routers = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <dashboard />,
+                element: <Dashboard />,
             },
             {
-                path: '/listaLCR',
-                element: <listaLCR />,
+                path: '/ListagemLCR',
+                element: <ListagemLCR />,
             },
             {
-                path: '/cadastroLCR',
-                element: <cadastroLCR />,
+                path: '/CadastroLCR',
+                element: <CadastroLCR />,
             }
         ]
     }

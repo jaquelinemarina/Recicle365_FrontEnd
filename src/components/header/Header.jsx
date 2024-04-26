@@ -5,8 +5,8 @@ function Header() {
     return (
         <header className={style.container}>
             <Link to="/" className={style.dashboard}>Recicle365</Link>
-            <Link to="/listaLCR" className={style.listaLCR}>Locais de Coleta</Link>
-            <Link to="/cadastroLCR" className={style.cadastroLCR}>Cadastrar Local de Coleta</Link>
+            <Link to="/ListagemLCR" className={style.listaLCR}>Locais de Coleta</Link>
+            <Link to="/CadastroLCR" className={style.cadastroLCR}>Cadastrar Local de Coleta</Link>
         </header>
     )
 }
