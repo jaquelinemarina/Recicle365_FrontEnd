@@ -3,25 +3,18 @@ import { useForm } from 'react-hook-form'
 import { UsersContext } from '../../context/usersContext'
 import { useContext, useState } from 'react'
 
-// --------------------------------------------------------------------------------------
-// -------- STATUS: tá enviando o formulário, mas no json as props ficam vazias ---------
-// --------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+// -------- STATUS: input type="text" está permitindo inserir números ---------
+// ----------------------------------------------------------------------------
 
 function CadastroUser() {
 
-    const {
-        register,
-        handleSubmit,
-        formState: { errors } } = useForm()
+    const { register, handleSubmit, formState: { errors } } = useForm()
 
-    function onSubmit(formValue) {
-        console.log("Formulário enviado", formValue)
+    const { registerUser } = useContext(UsersContext)
 
-        //addUser({ ...formValue, cpf: Number(formValue.cpf), number: Number(formValue.number), cep: Number(formValue.cep)})  ???
-    }
-
-    const {registerUser} = useContext(UsersContext)
-    const [newUser, setNewUser] = useState({ 
+    // estado para armazenar os valores do formulário
+    const [newUser, setNewUser] = useState({
         name: "",
         cpf: "",
         born: "",
@@ -33,10 +26,20 @@ function CadastroUser() {
         number: "",
         neighborhood: "",
         city: "",
-        state:"",
+        state: "",
     })
-    //preciso passar o value dentro do input? (ex: value={newUser.name} onChange={(e) => setNewUser({...newUser, name: e.target.value})}
 
+    //função para enviar o formulário
+    function onSubmit(formValue) {
+        console.log("Formulário enviado")
+
+        registerUser({ //converte para number
+            ...formValue,
+            cpf: Number(formValue.cpf),
+            number: Number(formValue.number),
+            cep: Number(formValue.cep)
+        })
+    }
 
     return (
         <div className={style.container}>
@@ -56,7 +59,7 @@ function CadastroUser() {
                     {errors?.name && <p>{errors.name.message}</p>}
                 </div>
 
-                <div className={style.cpf}> 
+                <div className={style.cpf}>
                     <label htmlFor="cpf">CPF</label>
                     <input placeholder="digite o seu CPF"
                         type="number"
@@ -223,7 +226,7 @@ function CadastroUser() {
                     {errors?.state && <p>{errors.state.message}</p>}
                 </div>
 
-                <button className={style.btnRegister} onClick={() => registerUser(newUser)}>Cadastrar </button>
+                <button type='submit' className={style.btnRegister}>Cadastrar</button>
             </form>
         </div>
     )

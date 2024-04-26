@@ -11,7 +11,7 @@ export const UsersContextProvider = ({ children }) => {
     }, [])
 
     useEffect(() => {
-  
+
     }, [users]);
 
     //fetch para buscar usuários no json
@@ -24,8 +24,11 @@ export const UsersContextProvider = ({ children }) => {
 
     //cadastrar novo usuário no json
     function registerUser(user) {
-        if (user.name === "") {  // o required do input não substitui essa parte ??
-            console.log('Dados incompletos.')
+        if (user.name === "" || user.email === "" || user.password === "" || user.cpf === "" || user.born === "" ||
+            user.cep === "" || user.address === "" || user.neighborhood === "" || user.city === "" || user.state === "") {
+
+            console.log('Dados incompletos. Por favor, preencha todos os campos obrigatórios.')
+            return //retorna para evitar o envio de dados vazios
         }
 
         fetch('http://localhost:3000/users', {
