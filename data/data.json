@@ -1,0 +1,96 @@
+{
+  "users": [
+    {
+      "name": "André Lucas Sales",
+      "cpf": "883.398.460-51",
+      "born": "22/01/1969",
+      "sex": "Masculino",
+      "email": "andre_lucas_sales@trietto.com.br",
+      "password": "fjJalbySBL",
+      "cep": "76821-060",
+      "address": "Avenida dos Imigrantes",
+      "number": 441,
+      "neighborhood": "Industrial",
+      "city": "Porto Velho",
+      "state": "RO",
+      "id": 1
+    },
+    {
+      "name": "Bernardo Thales Corte Real",
+      "cpf": "654.777.178-40",
+      "born": "25/01/2005",
+      "sex": "Masculino",
+      "email": "bernardo-cortereal72@gruposantin.com.br",
+      "password": "hs2kzm6Dh2",
+      "cep": "45658-695",
+      "address": "3ª Travessa da Esperança",
+      "number": 309,
+      "neighborhood": "Esperança",
+      "city": "Ilhéus",
+      "state": "BA",
+      "id": 2
+    },
+    {
+      "name": "Danilo Samuel Novaes",
+      "cpf": "396.761.601-05",
+      "born": "20/03/1972",
+      "sex": "Masculino",
+      "email": "danilo_samuel_novaes@caiuas.com.br",
+      "password": "GmFthzormJ",
+      "cep": "29153-083",
+      "address": "Rua Antônio de Paula Ramos",
+      "number": 642,
+      "neighborhood": "Porto de Santana",
+      "city": "Cariacica",
+      "state": "ES",
+      "id": 3
+    },
+    {
+      "name": "André Roberto Alves",
+      "cpf": "283.515.203-22",
+      "born": "09/04/1954",
+      "sex": "Masculino",
+      "email": "andre_alves@mpv.org.br",
+      "password": "oSNHh8a2KC",
+      "cep": "72225-332",
+      "address": "Quadra QNN 33 Área Especial B",
+      "number": 285,
+      "neighborhood": "Ceilândia Norte (Ceilândia)",
+      "city": "Brasília",
+      "state": "DF",
+      "id": 4
+    },
+    {
+      "name": "Julia Vera Mendes",
+      "cpf": "027.521.601-27",
+      "born": "25/04/1961",
+      "sex": "Feminino",
+      "email": "julia_vera_mendes@onset.com.br",
+      "password": "1sn8NTLyNt",
+      "cep": "57082-260",
+      "address": "Rua Paracatu",
+      "number": 362,
+      "neighborhood": "Santa Lúcia",
+      "city": "Maceió",
+      "state": "AL",
+      "id": 5
+    },
+    {
+      "name": "Breno Bruno Silveira",
+      "cpf": "358.407.183-60",
+      "born": "20/02/1985",
+      "sex": "Masculino",
+      "email": "breno-silveira77@alstom.com",
+      "password": "sEUX3HSr2t",
+      "cep": "88139-173",
+      "address": "Avenida Nova Aurora",
+      "number": 818,
+      "neighborhood": "Praia do Sonho (Ens Brito)",
+      "city": "Palhoça",
+      "state": "SC",
+      "id": 6
+    }
+  ],
+
+  "LCR": []
+}
