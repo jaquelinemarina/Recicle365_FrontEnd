@@ -1,0 +1,90 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5em;
+}
+
+.viewOne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+.locals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5em;
+}
+
+.localOne,
+.localTwo,
+.localThree,
+.localFour {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 2em;
+    width: 30em;
+    height: 8em;
+    background-color: #b6e6a1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    width: 10em;
+    justify-content: space-around;
+    margin-right: 3em;
+    background-color: rgb(98, 159, 125);
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.viewTwo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    gap: 10em;
+    padding: 5em;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15em;
+    height: 15em;
+    background-color: #bbcbb4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.map {
+    justify-content: center;
+    text-align: center;
+    padding: 5em;
+    width: 40em;
+    height: 70em;
+    border-radius: 10px;
+    background-color: #bbcbb4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
