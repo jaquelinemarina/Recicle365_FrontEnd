@@ -1,18 +1,26 @@
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { UsersContext } from '../../context/usersContext'
 import style from './login.module.css'
+import { Link } from 'react-router-dom'
 
-//--------------------------------------------------------------------------
-// O QUE FALTA:
-// - criar o form de login de forma correta
-// - criar a validação de login no botão
-// - criar a navegação para a página de dashboard, caso validado
-// - criar botão/lógica para fazer login com um dos usuários já cadastrados
-// -------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+// EXTRAS:
+// - criar condição que não permite remover usuário se houver um LCR cadastrado
+// - criar botão para preencher os dados de login clicando no usuário cadastrado
+// -----------------------------------------------------------------------------
 
 function Login() {
 
-    const { users, deleteUser } = useContext(UsersContext)
+    const { users, deleteUser, login } = useContext(UsersContext)
+
+    // autenticação de login
+    const [user, setUser] = useState({
+        email: '',
+        password: ''
+    })
+    async function realizarLogin() {
+        await login(user.email, user.password)
+    }
 
     useEffect(() => {
         console.log(users)
@@ -42,18 +50,28 @@ function Login() {
                 <form className={style.form}>
                     <div className={style.email}>
                         <label htmlFor="email">Email</label>
-                        <input type="email" id="email" placeholder='digite seu email' />
+                        <input type="email"
+                            id="email"
+                            placeholder='digite seu email'
+                            value={user.email}
+                            onChange={(e) => setUser({ ...user, email: e.target.value })}
+                        />
                     </div>
                     <div className={style.password}>
                         <label htmlFor="password">Senha</label>
-                        <input type="password" id="password" placeholder='digite sua senha' />
+                        <input type="password"
+                            id="password"
+                            placeholder='digite sua senha'
+                            value={user.password}
+                            onChange={(e) => setUser({ ...user, password: e.target.value })}
+                        />
                     </div>
                     <div className={style.button}>
-                        <a className={style.btnLogin} href="./dashboard">Login</a> {/* possívelmente devo usar uma validação que busque o user no json de users cadastrados */}
+                        <button className={style.btnLogin} onClick={() => realizarLogin()}>Login</button>
                     </div>
 
                     <div className={style.register}>
-                        <p>Não tem uma conta? <a className={style.btnRegister} href="./CadastroUser">Cadastre-se</a> </p>
+                        <p>Não tem uma conta? <Link to="/CadastroUser">Cadastre-se!</Link> </p>
                     </div>
                 </form>
             </div>
