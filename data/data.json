@@ -92,5 +92,136 @@
     }
   ],
 
-  "LCR": []
+  "LCR": [
+    {
+      "cpf": "358.407.183-60",
+      "name": "Ponta do Coral",
+      "description": "local com bastante movimentação de carros.",
+      "cep": "88139-173",
+      "address": "Avenida Auroreal",
+      "number": "602",
+      "neighborhood": "Centro Histórico",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": " -27.588642, -47.546766",
+      "type": "Papel, Plástico, Metal"
+    },
+    {
+      "cpf": "027.521.601-27",
+      "name": "Beira Mar Norte",
+      "description": "local movimentado e bem iluminado a noite.",
+      "cep": "88139-173",
+      "address": "Avenida Beiramar Norte",
+      "number": "818",
+      "neighborhood": "Centro",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": "-27.585363, -48.553581",
+      "type": "Vidro, Papel e Plástico"
+    },
+    {
+      "cpf": "283.515.203-22",
+      "name": "UFSC",
+      "description": "local com bastante movimentação de estudantes.",
+      "cep": "88040-900",
+      "address": "Campus Universitário Reitor João David Ferreira Lima",
+      "number": "100",
+      "neighborhood": "Trindade",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": " -27.589742, -48.546766",
+      "type": "Baterias e Plástico"
+    },
+    {
+      "cpf": "396.761.601-05",
+      "name": "Jardim Botânico",
+      "description": "local com bastante vegetação.",
+      "cep": "88075-010",
+      "address": "Rua Quatorze de Julho",
+      "number": "375",
+      "neighborhood": "Itacorubi",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": " -17.589742, -28.546136",
+      "type": "Papel, Plástico, Metal"
+    },
+    {
+      "cpf": "654.777.178-40",
+      "name": "Praça XV",
+      "description": "local com vegetação e movimentação de pessoas.",
+      "cep": "88010-400",
+      "address": "Praça XV de Novembro",
+      "number": "600",
+      "neighborhood": "Centro",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": " -27.589742, -48.546136",
+      "type": "Plástico, Vidro"
+    },
+    {
+      "cpf": "883.398.460-51",
+      "name": "Mercado Público",
+      "description": "local com comercio nas redondezas.",
+      "cep": "88010-400",
+      "address": "Rua Jerônimo Coelho",
+      "number": "60",
+      "neighborhood": "Centro",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": " -27.589742, -48.546136",
+      "type": "Papel, Plástico, Metal, Vidro, Orgânico"
+    },
+    {
+      "cpf": "027.521.601-27",
+      "name": "Praça da Alfândega",
+      "description": "local com bastante movimentação de pessoas durante o dia.",
+      "cep": "88010-400",
+      "address": "Praça da Alfândega",
+      "number": "00",
+      "neighborhood": "Centro",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": " -27.589742, -48.546136",
+      "type": "Papel, Plástico"
+    },
+    {
+      "cpf": "396.761.601-05",
+      "name": "Parque Ecológico do Córrego Grande",
+      "description": "local com bastante vegetação e fauna.",
+      "cep": "88010-400",
+      "address": "Rua da nascente",
+      "number": "25",
+      "neighborhood": "Córrego Grande",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": " -27.589742, -48.546136",
+      "type": "Papel, Plástico, Metal, Vidro"
+    },
+    {
+      "cpf": "654.777.178-40",
+      "name": "Praça da Sé",
+      "description": "local movimentado durante o dia.",
+      "cep": "88010-400",
+      "address": "Praça da Sé",
+      "number": "60",
+      "neighborhood": "Centro",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": " -27.589742, -48.546136",
+      "type": "Papel, Orgânico"
+    },
+    {
+      "cpf": "883.398.460-51",
+      "name": "Praça da República",
+      "description": "local pouco movimentado.",
+      "cep": "88010-400",
+      "address": "Praça da República",
+      "number": "23",
+      "neighborhood": "Centro",
+      "city": "Florianópolis",
+      "state": "SC",
+      "coordinates": " -27.589742, -48.546136",
+      "type": "Metal, Baterias"
+    }
+  ]
 }
