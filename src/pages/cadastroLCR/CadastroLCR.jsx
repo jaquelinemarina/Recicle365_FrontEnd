@@ -1,18 +1,46 @@
 import style from './cadastroLCR.module.css'
 import { useForm } from 'react-hook-form'
-// import React from 'react'
+import { LocalsContext } from '../../context/localsContext'
+import { useContext, useState } from 'react'
+
+// ---------------------------------------------------------------------------------------------
+// O QUR FALTA:
+// - quando o usuário clicar no botão ele deve ser redirecionado para a tela de listagem de LCR
+// ---------------------------------------------------------------------------------------------
+
 
 function CadastroLCR() {
 
     const {
-        register,
-        handleSubmit,
-        formState: { errors } } = useForm()
+        register, handleSubmit, formState: { errors } } = useForm()
+
+    const { registerLocal } = useContext(LocalsContext)
+
+    // estado para armazenar os valores do formulário
+    const [newUser, setNewUser] = useState({
+        cpf: "",
+        name: "",
+        description: "",
+        cep: "",
+        address: "",
+        number: "",
+        neighborhood: "",
+        city: "",
+        state: "",
+        coordinates: "",
+        type: ""
+    })
 
     function onSubmit(formValue) {
-        console.log("Formulário enviado", formValue)
+        console.log("Formulário enviado")
+        alert("Local cadastrado com sucesso!")
 
-        //addLocal({ ...formValue, cpf: Number(formValue.cpf) })
+        registerLocal({
+            ...formValue,
+            cpf: Number(formValue.cpf),
+            number: Number(formValue.number),
+            cep: Number(formValue.cep)
+        })
     }
 
     return (
