@@ -91,9 +91,9 @@
       "id": 6
     }
   ],
-
   "LCR": [
     {
+      "id": 1,
       "cpf": "358.407.183-60",
       "name": "Ponta do Coral",
       "description": "local com bastante movimentação de carros.",
@@ -107,6 +107,7 @@
       "type": "Papel, Plástico, Metal"
     },
     {
+      "id": 2,
       "cpf": "027.521.601-27",
       "name": "Beira Mar Norte",
       "description": "local movimentado e bem iluminado a noite.",
@@ -120,6 +121,7 @@
       "type": "Vidro, Papel e Plástico"
     },
     {
+      "id": 3,
       "cpf": "283.515.203-22",
       "name": "UFSC",
       "description": "local com bastante movimentação de estudantes.",
@@ -133,6 +135,7 @@
       "type": "Baterias e Plástico"
     },
     {
+      "id": 4,
       "cpf": "396.761.601-05",
       "name": "Jardim Botânico",
       "description": "local com bastante vegetação.",
@@ -146,6 +149,7 @@
       "type": "Papel, Plástico, Metal"
     },
     {
+      "id": 5,
       "cpf": "654.777.178-40",
       "name": "Praça XV",
       "description": "local com vegetação e movimentação de pessoas.",
@@ -159,6 +163,7 @@
       "type": "Plástico, Vidro"
     },
     {
+      "id": 6,
       "cpf": "883.398.460-51",
       "name": "Mercado Público",
       "description": "local com comercio nas redondezas.",
@@ -172,6 +177,7 @@
       "type": "Papel, Plástico, Metal, Vidro, Orgânico"
     },
     {
+      "id": 7,
       "cpf": "027.521.601-27",
       "name": "Praça da Alfândega",
       "description": "local com bastante movimentação de pessoas durante o dia.",
@@ -185,6 +191,7 @@
       "type": "Papel, Plástico"
     },
     {
+      "id": 8,
       "cpf": "396.761.601-05",
       "name": "Parque Ecológico do Córrego Grande",
       "description": "local com bastante vegetação e fauna.",
@@ -198,6 +205,7 @@
       "type": "Papel, Plástico, Metal, Vidro"
     },
     {
+      "id": 9,
       "cpf": "654.777.178-40",
       "name": "Praça da Sé",
       "description": "local movimentado durante o dia.",
@@ -211,6 +219,7 @@
       "type": "Papel, Orgânico"
     },
     {
+      "id": 10,
       "cpf": "883.398.460-51",
       "name": "Praça da República",
       "description": "local pouco movimentado.",
