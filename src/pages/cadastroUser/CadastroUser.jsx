@@ -2,10 +2,15 @@ import style from './cadastroUser.module.css'
 import { useForm } from 'react-hook-form'
 import { UsersContext } from '../../context/usersContext'
 import { useContext, useState } from 'react'
+import { Link } from "react-router-dom"
 
-// ----------------------------------------------------------------------------
-// -------- STATUS: input type="text" está permitindo inserir números ---------
-// ----------------------------------------------------------------------------
+//----------------------------------------------------------------
+// O QUE FALTA:
+// - tratar o erro de cpf já cadastrado
+// - usar dados da API ViaCEP para preenchimento automaticamatico
+// EXTRAS:
+// - impedir que o input type="text" aceite numeros
+// ---------------------------------------------------------------
 
 function CadastroUser() {
 
@@ -32,6 +37,7 @@ function CadastroUser() {
     //função para enviar o formulário
     function onSubmit(formValue) {
         console.log("Formulário enviado")
+        alert("Usuário cadastrado com sucesso! Retorne para a página de Login.")
 
         registerUser({ //converte para number
             ...formValue,
@@ -226,7 +232,10 @@ function CadastroUser() {
                     {errors?.state && <p>{errors.state.message}</p>}
                 </div>
 
-                <button type='submit' className={style.btnRegister}>Cadastrar</button>
+                <div className={style.register}>
+                    <button type='submit' className={style.btnRegister}>Cadastrar</button>
+                    <button> <Link to="/Login">Login</Link> </button> {/* solução temporária para o redirecionamento */}
+                </div>
             </form>
         </div>
     )
