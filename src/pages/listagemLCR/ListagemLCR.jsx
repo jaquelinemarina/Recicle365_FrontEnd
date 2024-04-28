@@ -11,7 +11,7 @@ import { LocalsContext } from '../../context/localsContext'
 
 function ListagemLCR() {
 
-    const { locals, deleteLocal } = useContext(LocalsContext)
+    const { locals, deleteLocal, getLocalById } = useContext(LocalsContext)
 
     return (
         <div className={style.container}>
@@ -26,9 +26,9 @@ function ListagemLCR() {
                         <p>{local.city} / {local.state}</p>
                         <p>Coordenadas: {local.coordinates}</p>
                         <p>Tipo de resíduos aceitos: {local.type}</p>
-                        
+
                         <div className={style.buttons}>
-                            <button onClick={() => editLocal(local.id)}>Editar</button>
+                            <button onClick={() => getLocalById(local.id)}>Editar</button>
                             <button onClick={() => deleteLocal(local.id)}>Excluir</button>
                         </div>
                     </div>
