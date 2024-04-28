@@ -1,5 +1,6 @@
 import style from './dashboard.module.css'
 import CardLocals from '../../components/cards/cardLocals'
+import CardUsers from '../../components/cards/cardUsers'
 
 function Dashboard() {
 
@@ -38,9 +39,9 @@ function Dashboard() {
                     <div className={style.card}>
                         <CardLocals />
                     </div>
-                    
-                    <div className={style.card}>
 
+                    <div className={style.card}>
+                        <CardUsers />
                     </div>
                 </div>
                 <div className={style.map}>
