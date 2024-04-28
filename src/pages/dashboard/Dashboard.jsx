@@ -1,4 +1,5 @@
 import style from './dashboard.module.css'
+import CardLocals from '../../components/cards/cardLocals'
 
 function Dashboard() {
 
@@ -34,14 +35,12 @@ function Dashboard() {
 
             <div className={style.viewTwo}>
                 <div className={style.cards}>
-                    {/* usar cards para trazer a quantidade de usuários ativos e locais cadastrados*/}
                     <div className={style.card}>
-                        <h3>Usuários Ativos</h3>
-                        <p>100</p>
+                        <CardLocals />
                     </div>
+                    
                     <div className={style.card}>
-                        <h3>Locais Cadastrados</h3>
-                        <p>10</p>
+
                     </div>
                 </div>
                 <div className={style.map}>
