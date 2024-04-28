@@ -2,6 +2,7 @@ import style from './cadastroLCR.module.css'
 import { useForm } from 'react-hook-form'
 import { LocalsContext } from '../../context/localsContext'
 import { useContext, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 // ---------------------------------------------------------------------------------------------
 // O QUR FALTA:
@@ -244,6 +245,7 @@ function CadastroLCR() {
                 </div>
 
                 <button className={style.btnRegisterLocal} type="submit">Salvar</button>
+                <Link to="/listagemLCR">Lista de Locais de Coleta de Resíduos</Link> {/* solução temporária de redirecionamento */}
             </form>
         </div>
     )
