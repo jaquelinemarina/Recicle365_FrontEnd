@@ -1,12 +1,12 @@
 import style from './cadastroUser.module.css'
 import { useForm } from 'react-hook-form'
 import { UsersContext } from '../../context/usersContext'
-import { useContext, useState } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import { Link } from "react-router-dom"
 
 //----------------------------------------------------------------
 // O QUE FALTA:
-// - tratar o erro de cpf já cadastrado
+// - tratar o erro de cpf já cadastrado - NÃO FUNCIONA
 // - usar dados da API ViaCEP para preenchimento automaticamatico
 // EXTRAS:
 // - impedir que o input type="text" aceite numeros
@@ -34,18 +34,41 @@ function CadastroUser() {
         state: "",
     })
 
-    //função para enviar o formulário
-    function onSubmit(formValue) {
-        console.log("Formulário enviado")
-        alert("Usuário cadastrado com sucesso! Retorne para a página de Login.")
+    // ---------------------------------------------------------------
+    // tratar o erro de cpf já cadastrado
+    
+    useEffect(() => {
+        fetch('http://localhost:3000/users')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                setNewUser(data)
+            })
+            .catch(error => console.error('Erro ao obter usuários:', error));
+    }, []);
 
-        registerUser({ //converte para number
-            ...formValue,
-            cpf: Number(formValue.cpf),
-            number: Number(formValue.number),
-            cep: Number(formValue.cep)
-        })
+    //função para enviar o formulário e validar se o CPF já existe
+    function onSubmit(formValue) {
+
+        const cpfExists = newUser.some(newUser => newUser.cpf === formValue.cpf);
+
+        if (cpfExists) {
+            console.log("CPF já cadastrado")
+            alert("CPF já cadastrado. Por favor, insira um CPF válido.")
+            return
+        } else {
+            console.log("Formulário enviado")
+            alert("Usuário cadastrado com sucesso! Retorne para a página de Login.")
+
+            registerUser({ //converte para number
+                ...formValue,
+                cpf: Number(formValue.cpf),
+                number: Number(formValue.number),
+                cep: Number(formValue.cep)
+            })
+        }
     }
+    // ---------------------------------------------------------------
 
     return (
         <div className={style.container}>
@@ -234,7 +257,7 @@ function CadastroUser() {
 
                 <div className={style.register}>
                     <button type='submit' className={style.btnRegister}>Cadastrar</button>
-                    <button> <Link to="/Login">Login</Link> </button> {/* solução temporária para o redirecionamento */}
+                    <Link to="/Login">Login</Link> {/* solução temporária para o redirecionamento */}
                 </div>
             </form>
         </div>
