@@ -2,7 +2,6 @@ import style from '../../components/map/map.module.css'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 
-
 function Map() {
     const position = [-27.586286149983113, -48.553167993931794]
     const position2 = [-27.596991961607397, -48.55320076179115]
@@ -35,7 +34,7 @@ function Map() {
                 <Popup>Ponta do Coral<br />(papel, plástico e metal)</Popup>
             </Marker>
             <Marker position={position5}>
-                <Popup>Jardim Botânico<br />(papel, plástico e metal)</Popup>
+                <Popup>Ponta do Coral<br />(papel, plástico e metal)</Popup>
             </Marker>
             <Marker position={position6}>
                 <Popup>Praça XV<br />(plástico e vidro)</Popup>
