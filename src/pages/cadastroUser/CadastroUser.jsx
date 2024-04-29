@@ -73,6 +73,7 @@ function CadastroUser() {
     return (
         <div className={style.container}>
             <h1 className={style.title}>Cadastre-se no Recicle365!</h1>
+            <h2 className={style.subtitle}>Faça parte do movimento de sustentabilidade.</h2>
 
             <form className={style.form} onSubmit={handleSubmit(onSubmit)}>
                 <div className={style.name}>

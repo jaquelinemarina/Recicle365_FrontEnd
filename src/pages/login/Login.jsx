@@ -43,6 +43,7 @@ function Login() {
 
             <div className={style.login}>
                 <h1 className={style.title}>Bem-vindo ao Recicle365!</h1>
+                <h2 className={style.subtitle}>Sua ação faz a diferença.</h2>
                 <p className={style.p}>
                     Faça login para ver os Locais de Coleta de Resíduos disponíveis perto de você.
                 </p>

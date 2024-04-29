@@ -46,7 +46,8 @@ function CadastroLCR() {
 
     return (
         <div className={style.container}>
-            <h1 className={style.title}>Cadastre um Local de Coleta de Resíduos</h1>
+            <h1 className={style.title}>Juntos, podemos fazer a diferença!</h1>
+            <h2 className={style.subtitle}>Cadastre um local de coleta de resíduos.</h2>
 
             <form className={style.form} onSubmit={handleSubmit(onSubmit)}>
 
