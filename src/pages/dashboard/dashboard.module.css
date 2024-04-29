@@ -76,15 +76,3 @@ button {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-.map {
-    justify-content: center;
-    text-align: center;
-    padding: 5em;
-    width: 40em;
-    height: 70em;
-    border-radius: 10px;
-    background-color: #bbcbb4;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}

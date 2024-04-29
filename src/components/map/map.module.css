@@ -1,0 +1,7 @@
+.mapContainer {
+    height: 35vw;
+    width: 70vw;
+    z-index: 2;
+    margin-bottom: 2.5em;
+    border-radius: 10px;
+}
