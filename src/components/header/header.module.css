@@ -1,7 +1,6 @@
 .container {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
     position: fixed;
     width: 100vw;
     height: 3.3em;
@@ -10,18 +9,19 @@
 
 .dashboard,
 .listaLCR,
-.cadastroLCR {
+.cadastroLCR,
+.exit {
     text-decoration: none;
     color: whitesmoke;
-    font-family: "Comfortaa", sans-serif;
-    font-size: 14px;
+    font-size: 15px;
 }
 
-
-.listaLCR {
-    margin-left: 55em;
+.menu {
+    width: 40vw;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.cadastroLCR {
-    margin-right: 1em;
+.exit {
+    margin-left: 50em;
 }
