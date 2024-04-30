@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5em;
+    padding: 2em;
+    gap: 2em;
 }
 
 .viewOne {
@@ -11,29 +12,31 @@
     align-items: center;
     justify-content: space-around;
     height: 100vh;
+    width: 100vw;
 }
 
-.locals {
+.title {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5em;
+    gap: 15em;
 }
 
-.localOne,
-.localTwo,
-.localThree,
-.localFour {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    padding: 2em;
-    width: 30em;
-    height: 8em;
-    background-color: #b6e6a1;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.title h2 {
+    margin-top: 1em;
+}
+
+h3 {
+    font-size: 23px;
+}
+
+.viewOne h3 {
+    margin-top: -3em;
+}
+
+.subtitle {
+    width: 82vw;
+    text-align: center;
+    font-size: 20px;
+    margin-top: -3em;
 }
 
 button {
@@ -50,29 +53,58 @@ button {
 
 .viewTwo {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: 100vh;
-    gap: 10em;
-    padding: 5em;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12em;
 }
 
 .cards {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    margin-top: 2em;
     gap: 5em;
 }
 
 .card {
     display: flex;
+    text-align: center;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 15em;
-    height: 15em;
+    padding: 5em;
+    width: 17em;
+    height: 13em;
     background-color: #bbcbb4;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-top: 1em;
+}
+
+.card p {
+    font-size: 30px;
+}
+
+.listTitle {
+    margin-bottom: 3em;
+}
+
+.listTitle h1 {
+    margin-bottom: 1em;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.map {
+    margin-top: 5em;
+    height: 90vh;
+    width: 90vw;
+}
+
+.map h1 {
+    align-items: left;
 }
