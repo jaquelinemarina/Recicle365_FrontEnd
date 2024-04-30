@@ -4,17 +4,17 @@ import { UsersContext } from '../../context/usersContext'
 import { useContext, useState, useEffect } from 'react'
 import { Link } from "react-router-dom"
 
-//----------------------------------------------------------------
+//-------------------------------------------------------------------------------
 // O QUE FALTA:
 // - tratar o erro de cpf já cadastrado - NÃO FUNCIONA
-// - usar dados da API ViaCEP para preenchimento automaticamatico
+// - usar dados da API ViaCEP para preenchimento automaticamatico - NÃO FUNCIONA
 // EXTRAS:
 // - impedir que o input type="text" aceite numeros
-// ---------------------------------------------------------------
+// ------------------------------------------------------------------------------
 
 function CadastroUser() {
 
-    const { register, handleSubmit, formState: { errors } } = useForm()
+    const { register, handleSubmit, setValue, setFocus, formState: { errors } } = useForm()
 
     const { registerUser } = useContext(UsersContext)
 
@@ -36,7 +36,7 @@ function CadastroUser() {
 
     // ---------------------------------------------------------------
     // tratar o erro de cpf já cadastrado
-    
+
     useEffect(() => {
         fetch('http://localhost:3000/users')
             .then(response => response.json())
@@ -69,6 +69,23 @@ function CadastroUser() {
         }
     }
     // ---------------------------------------------------------------
+    // função para buscar o CEP na API ViaCEP
+
+    const checkCEP = (e) => {
+        const cep = e.target.value.replace(/\D/g, '') //remove tudo o que não for número
+        console.log(cep)
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                setValue('address', data.logradouro)
+                setValue('neighborhood', data.bairro)
+                setValue('city', data.localidade)
+                setValue('state', data.uf)
+                setFocus('number')
+            })
+            .catch(error => console.error('Erro ao obter CEP:', error))
+    }
 
     return (
         <div className={style.container}>
@@ -157,6 +174,7 @@ function CadastroUser() {
                     <label htmlFor="cep">CEP</label>
                     <input placeholder="digite o CEP"
                         type="number"
+                        onBlur={checkCEP}
                         {...register("cep", {
                             required: "Campo obrigatório.",
                             minLength: { value: 3, message: "Insira um número válido" },
