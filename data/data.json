@@ -16,21 +16,6 @@
       "id": 1
     },
     {
-      "name": "Bernardo Thales Corte Real",
-      "cpf": "654.777.178-40",
-      "born": "25/01/2005",
-      "sex": "Masculino",
-      "email": "bernardo-cortereal72@gruposantin.com.br",
-      "password": "hs2kzm6Dh2",
-      "cep": "45658-695",
-      "address": "3ª Travessa da Esperança",
-      "number": 309,
-      "neighborhood": "Esperança",
-      "city": "Ilhéus",
-      "state": "BA",
-      "id": 2
-    },
-    {
       "name": "Danilo Samuel Novaes",
       "cpf": "396.761.601-05",
       "born": "20/03/1972",
