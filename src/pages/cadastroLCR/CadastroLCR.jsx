@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom'
 function CadastroLCR() {
 
     const {
-        register, handleSubmit, formState: { errors } } = useForm()
+        register, handleSubmit, setValue, getValues, setFocus, formState: { errors } } = useForm()
 
     const { registerLocal } = useContext(LocalsContext)
 
@@ -31,6 +31,22 @@ function CadastroLCR() {
         coordinates: "",
         type: ""
     })
+
+    // função para buscar o CEP na API ViaCEP
+    const checkCEP = () => {
+        const cep = getValues('cep')
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                setValue('address', data.logradouro)
+                setValue('neighborhood', data.bairro)
+                setValue('city', data.localidade)
+                setValue('state', data.uf)
+                setFocus('number')
+            })
+            .catch(error => console.error('Erro ao obter CEP:', error))
+    }
 
     function onSubmit(formValue) {
         console.log("Formulário enviado")
@@ -93,6 +109,7 @@ function CadastroLCR() {
                     <input placeholder="digite o CEP"
                         type="number"
                         {...register("cep", {
+                            onBlur: () => checkCEP(),
                             required: "Campo obrigatório.",
                             minLength: { value: 3, message: "Insira um número válido" },
                             maxLength: { value: 9, message: "Máximo 9 caracteres" },

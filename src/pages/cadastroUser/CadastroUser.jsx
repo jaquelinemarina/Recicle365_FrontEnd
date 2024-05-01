@@ -13,7 +13,7 @@ import { Link } from "react-router-dom"
 
 function CadastroUser() {
 
-    const { register, handleSubmit, setValue, setFocus, formState: { errors } } = useForm()
+    const { register, handleSubmit, setValue, getValues, setFocus, formState: { errors } } = useForm()
 
     const { registerUser, users } = useContext(UsersContext)
 
@@ -38,12 +38,10 @@ function CadastroUser() {
             })
         }
     }
-    // ---------------------------------------------------------------
-    // função para buscar o CEP na API ViaCEP
 
-    const checkCEP = (e) => {
-        const cep = e.target.value.replace(/\D/g, '') //remove tudo o que não for número
-        console.log(cep)
+    // função para buscar o CEP na API ViaCEP
+    const checkCEP = () => {
+        const cep = getValues('cep')
         fetch(`https://viacep.com.br/ws/${cep}/json/`)
             .then(res => res.json())
             .then(data => {
@@ -145,7 +143,7 @@ function CadastroUser() {
                     <input placeholder="digite o CEP"
                         type="number"
                         {...register("cep", {
-                            onBlur:{checkCEP},
+                            onBlur: () => checkCEP(),
                             required: "Campo obrigatório.",
                             minLength: { value: 3, message: "Insira um número válido" },
                             maxLength: { value: 9, message: "Máximo 9 caracteres" },
