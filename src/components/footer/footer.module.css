@@ -4,14 +4,15 @@
     justify-content: center;
     position: relative;
     width: 100vw;
-    height: 2.5em;
-    background-color: rgb(40, 74, 40);
+    height: 2.7em;
+    background-color: var(--eerieBlack);
     color: whitesmoke;
+    border-top: 1px solid var(--yellowGreen);
 }
 
 .p {
-    font-family: "Comfortaa", sans-serif;
-    font-size: 13px;
+    font-family: "poppins", sans-serif;
+    font-size: 13.5px;
     color: whitesmoke;
 }
 
@@ -22,7 +23,7 @@ i {
 
 .social {
     margin-top: .2em;
-    margin-left: 65em;
+    margin-left: 60em;
 }
 
 .github {
