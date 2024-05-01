@@ -1,10 +1,10 @@
 .container {
     display: flex;
     align-items: center;
-    position: fixed;
+    position: relative;
     width: 100vw;
     height: 3.3em;
-    background-color: rgb(40, 74, 40);
+    background-color: var(--eerieBlack);
 }
 
 .dashboard,
@@ -12,8 +12,9 @@
 .cadastroLCR,
 .exit {
     text-decoration: none;
-    color: whitesmoke;
-    font-size: 15px;
+    color: var(--whiteSmoke);
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
 }
 
 .menu {
@@ -22,6 +23,18 @@
     justify-content: space-evenly;
 }
 
+.dashboard {
+    color: var(--yellowGreen);
+}
+
+.listaLCR {
+    color: var(--steelBlue);
+}
+
+.cadastroLCR {
+    color: var(--ultraViolet);
+}
 .exit {
-    margin-left: 50em;
+    margin-left: 45em;
+    color: var(--raspbarry);
 }
