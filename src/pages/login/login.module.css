@@ -1,8 +1,8 @@
 .container {
     display: flex;
-    justify-content: space-evenly;
     align-items: top;
-    padding: 8em;;
+    padding: 8em;
+    gap: 8em;
 }
 
 .users{
@@ -10,12 +10,35 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    height: 50%;
+    text-align: center;
+    width: 30vw;
+    gap: 1.8em;
+    font-size: 14px;
 }
 
-.list {
-    color: black;
+.users h2 {
+    font-size: 28px;
+    margin-top: -2.5em;
+    padding: 1em;
+
+}
+.users h3 {
+    font-size: 22px;
+    margin-bottom: .5em;
+    width: 20vw;
+}
+
+.btnRemove,.btnLogin {
+    text-align: center;
+    width: 13em;
+    height: 2.6em;
+    padding: 0;
+    border-radius: 3px;
+}
+
+.btnLogin {
+    margin-top: 1.5em;
+    width: 20em;
 }
 
 .login {
@@ -23,15 +46,42 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    height: 50%;
+    width: 50vw;
+    height: 35vw;
     background-color: #f5f5f5;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: -.8em;
 }
 
-.email, .password {
-    display: flex;
-    flex-direction: column;
-    margin: 1em;
+.title{
+    margin-top: 1em;
+}
+
+.subtitle{
+    margin-top: .5em;
+}
+
+
+input {
+    margin-bottom: 1em;
+    height: 2.8em;
+    border-radius: 3px;
+    border:solid 1.5px;
+}
+.login p {
+    margin-bottom: 2.3em;
+    margin-top: 2em;
+    font-size: 15px;
+}
+
+.button p {
+    margin-top: 2em;
+    margin-left: 2.3em;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.link {
+    text-decoration: none;
 }
