@@ -5,6 +5,7 @@
     width: 100vw;
     height: 3.3em;
     background-color: var(--eerieBlack);
+    border-bottom: 1px solid var(--yellowGreen);
 }
 
 .dashboard,
@@ -12,7 +13,6 @@
 .cadastroLCR,
 .exit {
     text-decoration: none;
-    color: var(--whiteSmoke);
     font-family: "Poppins", sans-serif;
     font-size: 16px;
 }
@@ -34,6 +34,7 @@
 .cadastroLCR {
     color: var(--ultraViolet);
 }
+
 .exit {
     margin-left: 45em;
     color: var(--raspbarry);
