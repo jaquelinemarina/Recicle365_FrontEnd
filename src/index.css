@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Quicksand:wght@300&display=swap');
-/* font-family: "Poiret One", sans-serif;  |  font-family: "Quicksand", sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:wght@300&family=Quicksand&display=swap');
+/* font-family: "Poiret One", sans-serif;  |  font-family: "Quicksand", sans-serif;  |  font-family: "Poppins", sans-serif; */
 
 
 /*após utilizar https://coolors.co/  para gerar uma paleta de cores*/
@@ -9,7 +10,7 @@
     --yellowGreen: #8AC926;
     --steelBlue: #1982c4;
     --raspbarry: #D81159;
-    --ultraViolet: #62448D;
+    --ultraViolet: #8131d2;
 
     /* outra opção */
     --charcoal: #2F3E46;
