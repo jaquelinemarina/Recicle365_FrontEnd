@@ -48,31 +48,19 @@ export const LocalsContextProvider = ({ children }) => {
 
     //fetch para buscar local por id
     function getLocalById(id) {
-        fetch("http://localhost:3000/LCR/" + id)
-            .then(response => response.json())
-            .then(dados => setLocals(dados))
-            .catch(erro => console.log(erro))
+        return fetch("http://localhost:3000/LCR/" + id)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro ao buscar o local')
+                }
+                return response.json()
+            })
+            .then(data => {
+                console.log('Dados do local:', data);
+                return data;
+            })
+            .catch(error => console.log(error));
     }
-
-    //editar local no json
-    function editLocal(local, id){
-        if(local.name == ""){
-          alert("O local precisa ter um nome!")
-        }
-    
-        fetch("http://localhost:3000/LCR/" + id, {
-          method: "PUT",
-          body: JSON.stringify(local),
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        })
-        .then(() => { 
-          alert("Local editado com sucesso!")
-          getLocalById()
-        })
-        .catch(() => alert("Erro ao editar local!"))
-      }
 
     //deletar local no json
     function deleteLocal(id) {
@@ -87,7 +75,7 @@ export const LocalsContextProvider = ({ children }) => {
     }
 
     return (
-        <LocalsContext.Provider value={{ locals, registerLocal, getLocalById, editLocal, deleteLocal }}>
+        <LocalsContext.Provider value={{ locals, registerLocal, getLocalById, deleteLocal }}>
             {children}
         </LocalsContext.Provider>
     )
