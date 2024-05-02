@@ -18,7 +18,6 @@
     font-family: "Poiret One", cursive;
     letter-spacing: .2em;
     color: var(--yellowGreen);
-    margin-top: 1em;
 }
 
 .titleLCR h2 {
@@ -36,7 +35,7 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 30em;
-    height: 35em;
+    height: 32em;
     padding: 20px;
     border-radius: 10px;
     gap: .5em;
@@ -54,8 +53,8 @@
 }
 
 .formLCR input {
-    width: 20em;
-    height: 3em;
+    width: 23em;
+    height: 3.3em;
     background-color: var(--eerieBlack);
     color: var(--whiteSmoke);
     border: 1.5px solid var(--ultraViolet);
@@ -69,7 +68,7 @@ input::placeholder {
 
 .formLCR select {
     display: flex;
-    width: 22.5em;
+    width: 23em;
     height: 3.3em;
     background-color: var(--eerieBlack);
     color: rgb(194, 194, 198);
