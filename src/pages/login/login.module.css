@@ -1,21 +1,74 @@
 .container {
     display: flex;
-    justify-content: space-evenly;
     align-items: top;
-    padding: 8em;;
+    padding: 5em;
+    gap: 10em;
+    background-color: var(--eerieBlack);
+    height: 100vh;
 }
 
-.users{
+.viewOne h2 {
+    font-size: 24px;
+    margin-top: 2.8em;
+    margin-bottom: -2em;
+    margin-left: 4em;
+    font-family: "Poiret One", sans-serif;
+    letter-spacing: .2em;
+    color: var(--raspbarry);
+}
+
+.usersContent {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 50%;
-    height: 50%;
+    text-align: center;
+    margin-top: 5em;
+    margin-left: 4em;
+    overflow: auto;
+    overflow-x: hidden;
+    height: 50vh;
+    gap: 2em;
 }
 
-.list {
-    color: black;
+.usersContent h3 {
+    font-size: 20px;
+    margin-bottom: .5em;
+    width: 20vw;
+    color: var(--steelBlue);
+}
+
+.btnRemove,
+.btnLogin {
+    text-align: center;
+    width: 13em;
+    height: 2.6em;
+    padding: 0;
+    border-radius: 3px;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: .1em;
+    cursor: pointer;
+}
+
+.btnRemove {
+    background-color: var(--eerieBlack);
+    color: var(--whiteSmoke);
+    border: solid 1px var(--raspbarry);
+    border-radius: 5px;
+    color: var(--raspbarry);
+    font-size: 13px;
+
+}
+
+.btnLogin {
+    background-color: var(--ultraViolet);
+    color: var(--whiteSmoke);
+    margin-top: 1.5em;
+    width: 18.5em;
+    height: 2.4em;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
 }
 
 .login {
@@ -23,15 +76,86 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    height: 50%;
-    background-color: #f5f5f5;
+    width: 45vw;
+    height: 40vw;
+    border: solid 1px var(--yellowGreen);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.email, .password {
+.title {
     display: flex;
     flex-direction: column;
-    margin: 1em;
+    align-items: center;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.title h2 {
+    color: var(--yellowGreen);
+    font-family: "Poiret One", sans-serif;
+    letter-spacing: .1em;
+    margin-top: .5em;
+}
+
+.title p {
+    color: var(--ultraViolet);
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    margin-top: 2.5em;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.form label {
+    color: var(--yellowGreen);
+    letter-spacing: .1em;
+    font-size: 16px;
+    margin-top: .5em;
+    margin-left: 1em;
+
+}
+
+input {
+    margin-bottom: 1em;
+    height: 3em;
+    border-radius: 5px;
+    border: solid 1.5px var(--yellowGreen);
+    background-color: var(--eerieBlack);
+    outline: none;
+    color: var(--whiteSmoke);
+    font-size: 15px;
+    letter-spacing: .1em;
+}
+
+::placeholder {
+    color: var(--whiteSmoke);
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    letter-spacing: .1em;
+}
+
+
+.redirect {
+    margin-top: 1.8em;
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--raspbarry);
+}
+
+.link {
+    text-decoration: none;
+    color: var(--yellowGreen);
+}
+
+.btnLogin:hover {
+    background-color: var(--steelBlue);
+    color: var(--whiteSmoke);
+}
+.link:hover {
+    color: var(--steelBlue);
 }

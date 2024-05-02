@@ -16,6 +16,21 @@
       "id": 1
     },
     {
+      "name": "Bernardo Thales Real",
+      "cpf": "654.777.178-40",
+      "born": "25/01/2005",
+      "sex": "Masculino",
+      "email": "bernardoreal72@gruposantin.com.br",
+      "password": "hs2kzm6Dh2",
+      "cep": "45658-695",
+      "address": "Travessa da Esperança",
+      "number": 309,
+      "neighborhood": "Esperança",
+      "city": "Ilhéus",
+      "state": "BA",
+      "id": 2
+    },
+    {
       "name": "Danilo Samuel Novaes",
       "cpf": "396.761.601-05",
       "born": "20/03/1972",
@@ -89,7 +104,7 @@
       "city": "Florianópolis",
       "state": "SC",
       "coordinates": " -27.588642, -47.546766",
-      "type": "papel, plástico e metal"
+      "type": "papel, orgânico e metal"
     },
     {
       "id": 2,
@@ -131,7 +146,7 @@
       "city": "Florianópolis",
       "state": "SC",
       "coordinates": " -17.589742, -28.546136",
-      "type": "papel, plástico metal"
+      "type": "papel, plástico e orgânico"
     },
     {
       "id": 5,
@@ -159,7 +174,7 @@
       "city": "Florianópolis",
       "state": "SC",
       "coordinates": " -27.589742, -48.546136",
-      "type": "papel, plástico, metal, vidro e orgânico"
+      "type": "papel, plástico e vidro"
     },
     {
       "id": 7,
@@ -173,12 +188,12 @@
       "city": "Florianópolis",
       "state": "SC",
       "coordinates": " -27.589742, -48.546136",
-      "type": "papel e plástico"
+      "type": "papel e orgânico"
     },
     {
       "id": 8,
       "cpf": "396.761.601-05",
-      "name": "Parque Ecológico do Córrego Grande",
+      "name": "Parque do Córrego Grande",
       "description": "local com bastante vegetação e fauna.",
       "cep": "88010-400",
       "address": "Rua da nascente",
@@ -187,7 +202,7 @@
       "city": "Florianópolis",
       "state": "SC",
       "coordinates": " -27.589742, -48.546136",
-      "type": "papel, plástico, metal e vidro"
+      "type": "metal e vidro"
     },
     {
       "id": 9,

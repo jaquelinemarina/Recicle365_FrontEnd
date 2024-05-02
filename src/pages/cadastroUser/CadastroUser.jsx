@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 import { UsersContext } from '../../context/usersContext'
 import { useContext, useState, useEffect } from 'react'
 import { Link } from "react-router-dom"
+import logo from '../../assets/logo.png'
 
 //-------------------------------------------------------------------------------
 // O QUE FALTA:
@@ -57,13 +58,14 @@ function CadastroUser() {
 
     return (
         <div className={style.container}>
-            <h1 className={style.title}>Cadastre-se no Recicle365!</h1>
+            <h1 className={style.title}>Cadastre-se no</h1>
+            <img src={logo} width={300} alt='Logo Recicle365' />
             <h2 className={style.subtitle}>Faça parte do movimento de sustentabilidade.</h2>
 
             <form className={style.form} onSubmit={handleSubmit(onSubmit)}>
                 <div className={style.name}>
                     <label htmlFor="name">Nome completo</label>
-                    <input placeholder="digite o seu nome completo"
+                    <input placeholder="digite seu nome completo"
                         type="text"
                         {...register("name", {
                             required: "Campo obrigatório.",
@@ -76,7 +78,7 @@ function CadastroUser() {
 
                 <div className={style.cpf}>
                     <label htmlFor="cpf">CPF</label>
-                    <input placeholder="digite o seu CPF"
+                    <input placeholder="digite seu CPF"
                         type="number"
                         {...register("cpf", {
                             required: "Campo obrigatório.",
@@ -87,23 +89,10 @@ function CadastroUser() {
                     {errors?.cpf && <p>{errors.cpf.message}</p>}
                 </div>
 
-                <div className={style.sex}>
-                    <label htmlFor="sex">Sexo</label>
-                    <select name="sex" id="sex"
-                        {...register("sex", {
-                            required: "Campo obrigatório."
-                        })}>
-                        <option value="">selecione uma opção</option>
-                        <option value="Homem">Homem</option>
-                        <option value="Mulher">Mulher</option>
-                        <option value="Vazio">Prefiro não responder</option>
-                    </select>
-                    {errors?.sex && <p>{errors.sex.message}</p>}
-                </div>
 
                 <div className={style.born}>
                     <label htmlFor="born">Data de nascimento</label>
-                    <input placeholder="digite a data do seu nascimento"
+                    <input placeholder="digite sua data de nascimento"
                         type="datetime"
                         {...register("born", {
                             required: "Campo obrigatório.",
@@ -127,17 +116,6 @@ function CadastroUser() {
                     {errors?.email && <p>{errors.email.message}</p>}
                 </div>
 
-                <div className={style.password}>
-                    <label htmlFor="password">Senha</label>
-                    <input placeholder="digite sua senha"
-                        type="password"
-                        {...register("password", {
-                            required: "Campo obrigatório.",
-                            minLength: { value: 6, message: "Mínimo 6 caracteres" },
-                        })}
-                    />
-                    {errors?.password && <p>{errors.password.message}</p>}
-                </div>
 
                 <div className={style.cep}>
                     <label htmlFor="cep">CEP</label>
@@ -152,10 +130,23 @@ function CadastroUser() {
                     />
                     {errors?.cep && <p>{errors.cep.message}</p>}
                 </div>
-
+                
+                        <div className={style.sex}>
+                            <label htmlFor="sex">Sexo</label>
+                            <select className={style.select} name="sex" id="sex"
+                                {...register("sex", {
+                                    required: "Campo obrigatório."
+                                })}>
+                                <option value="">selecione uma opção</option>
+                                <option value="Homem">Homem</option>
+                                <option value="Mulher">Mulher</option>
+                                <option value="Vazio">Prefiro não responder</option>
+                            </select>
+                            {errors?.sex && <p>{errors.sex.message}</p>}
+                        </div>
                 <div className={style.address}> {/* usar dados da API ViaCEP - provavelmente para preenchimento automático */}
-                    <label htmlFor="address">Endereço</label>
-                    <input placeholder="digite o seu endereço"
+                    <label htmlFor="address">Rua</label>
+                    <input placeholder="digite o nome da sua rua"
                         type="text"
                         {...register("address", {
                             required: "Campo obrigatório.",
@@ -177,11 +168,23 @@ function CadastroUser() {
                         })}
                     />
                     {errors?.number && <p>{errors.number.message}</p>}
+
                 </div>
+                        <div className={style.password}>
+                            <label htmlFor="password">Senha</label>
+                            <input placeholder="digite sua senha"
+                                type="password"
+                                {...register("password", {
+                                    required: "Campo obrigatório.",
+                                    minLength: { value: 6, message: "Mínimo 6 caracteres" },
+                                })}
+                            />
+                            {errors?.password && <p>{errors.password.message}</p>}
+                        </div>
 
                 <div className={style.neighborhood}>
                     <label htmlFor="neighborhood">Bairro</label>
-                    <input placeholder="digite o seu bairro"
+                    <input placeholder="digite seu bairro"
                         type="text"
                         {...register("neighborhood", {
                             required: "Campo obrigatório.",
@@ -194,7 +197,7 @@ function CadastroUser() {
 
                 <div className={style.city}>
                     <label htmlFor="city">Cidade</label>
-                    <input placeholder="digite a cidade"
+                    <input placeholder="digite sua cidade"
                         type="text"
                         {...register("city", {
                             required: "Campo obrigatório.",
@@ -206,7 +209,7 @@ function CadastroUser() {
 
                 <div className={style.state}>
                     <label htmlFor="state">Estado</label>
-                    <select name="state" id="state"
+                    <select className={style.select} name="state" id="state"
                         {...register("state", {
                             required: "Por favor, selecione uma opção."
                         })}>
@@ -242,11 +245,11 @@ function CadastroUser() {
                     {errors?.state && <p>{errors.state.message}</p>}
                 </div>
 
+            </form>
                 <div className={style.register}>
                     <button type='submit' className={style.btnRegister}>Cadastrar</button>
-                    <Link to="/Login">Login</Link> {/* solução temporária para o redirecionamento */}
+                   <p>Já se cadastrou? <Link className={style.link} to="/Login">Faça login</Link></p> {/* solução temporária para o redirecionamento */}
                 </div>
-            </form>
         </div>
     )
 }

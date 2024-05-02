@@ -26,7 +26,7 @@ function CardLocals() {
     return (
         <div className="card">
             <div className="card-body">
-                <h3 className="card-title">Locais Cadastrados</h3>
+                <h3 className="card-title">LOCAIS CADASTRADOS</h3>
                 <p className="card-text">{howManyLocals}</p>
             </div>
         </div>

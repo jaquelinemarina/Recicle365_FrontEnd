@@ -2,7 +2,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5em;
+    padding: 2em;
+    gap: 2em;
+    background-color: var(--eerieBlack);
 }
 
 .viewOne {
@@ -11,68 +13,221 @@
     align-items: center;
     justify-content: space-around;
     height: 100vh;
+    width: 100vw;
 }
 
-.locals {
+.title {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5em;
+    align-items: center;
+    gap: 4em;
+    margin-top: -2em;
 }
 
-.localOne,
-.localTwo,
-.localThree,
-.localFour {
+.titleText {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    padding: 2em;
-    width: 30em;
-    height: 8em;
-    background-color: #b6e6a1;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: left;
+    color: var(--yellowGreen);
+    gap: 1em;
 }
 
-button {
-    width: 10em;
-    justify-content: space-around;
-    margin-right: 3em;
-    background-color: rgb(98, 159, 125);
-    color: whitesmoke;
-    border: none;
-    border-radius: 5px;
+.title h2 {
+    font-family: "Poiret One", sans-serif;
+    font-weight: lighter;
+    font-size: 27px;
+}
+
+h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: lighter;
+    font-size: 23px;
+    color: var(--yellowGreen);
+}
+
+.viewOne h3 {
+    display: flex;
+    margin-top: -5em;
+    letter-spacing: .1em;
+    font-size: 27px;
+}
+
+.viewOne p {
+   color: var(--ultraViolet);
+   font-size: 27px;
+   margin-top: -.0em;
+}
+
+.subtitle {
+    width: 82vw;
+    height: 24vh;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    color: var(--whiteSmoke);
+    font-weight: lighter;
+    font-size: 18px;
+    margin-top: -8em;
     padding: 1em;
-    cursor: pointer;
+    border: 2px solid var(--ultraViolet);
+    border-radius: 7px;
 }
 
 .viewTwo {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: 100vh;
-    gap: 10em;
-    padding: 5em;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: -2em;
+    gap: 6em;
 }
 
 .cards {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    margin-top: 8em;
     gap: 5em;
 }
 
 .card {
     display: flex;
+    text-align: center;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 15em;
-    height: 15em;
-    background-color: #bbcbb4;
+    padding: 5em;
+    width: 17em;
+    height: 11em;
+    background-color: var(--yellowGreen);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-weight: bolder;
+}
+
+.card h3 {
+    margin-top: 1.4em;
+    margin-bottom: -.8em;
+    color: var(--eerieBlack);
+    font-weight: 900;
+}
+
+.card p {
+    font-size: 50px;
+    color: var(--eerieBlack);
+}
+
+.list {
+    margin-left: 3em;
+}
+
+.listTitle {
+    margin-bottom: 3em;
+    color: var(--steelBlue);
+    font-family: "Poiret One", sans-serif;
+    letter-spacing: .2em;
+    font-size: 20px;
+}
+
+.listTitle h1 {
+    margin-bottom: .8em;
+    letter-spacing: .2em;
+}
+
+.listTitle h3 {
+    font-size: 20px;
+    width: 28em;
+    
+    margin-bottom: -1em;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--steelBlue);
+}
+
+.locals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60vh;
+    width: 40vw;
+    overflow: auto;
+    border: solid 2px var(--raspbarry);
+    border-radius: 5px;
+}
+
+.local {
+    width: 35vw;
+    padding: 1em;
+    border: solid 2px var(--steelBlue);
+    border-radius: 5px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-family: "Poppins", sans-serif;
+}
+
+.local h2 {
+    font-family: "Poiret One", sans-serif;
+    font-size: 25px;
+    letter-spacing: .1em;
+    color: var(--raspbarry);
+    margin-left: .3em;
+    margin-bottom: .5em;
+}
+
+.locals p {
+    line-height: 1em;
+    font-size: 17px;
+    color: var(--steelBlue);
+
+}
+
+.map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5em;
+    height: 80vh;
+    width: 90vw;
+}
+
+.mapTitle{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 70vw;
+    margin-bottom: 1.5em;
+}
+
+.map h1 {
+    font-family: "Poiret One", sans-serif;
+    color: var(--yellowGreen);
+    letter-spacing: .2em;
+    margin-bottom: .4em;
+}
+
+.map h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: lighter;
+    letter-spacing: .1em;
+    color: var(--ultraViolet);
+}
+
+
+::-webkit-scrollbar-track {
+    background-color: var(--eerieBlack);
+}
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--raspbarry);
+}
+
+.card:hover {
+    background-color: var(--ultraViolet);
+}
+
+.subtitle:hover {
+    color: var(--ultraViolet);
+}
+
+.link:hover {
+    color: var(--ultraViolet);
 }

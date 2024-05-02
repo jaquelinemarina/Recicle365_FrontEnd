@@ -26,7 +26,7 @@ function CardUsers() {
     return (
         <div className="card">
             <div className="card-body">
-                <h3 className="card-title">Usuários Cadastrados</h3>
+                <h3 className="card-title">USUÁRIOS CADASTRADOS</h3>
                 <p className="card-text">{howManyUsers}</p>
             </div>
         </div>

@@ -1,27 +1,41 @@
 .container {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    position: fixed;
+    position: relative;
     width: 100vw;
     height: 3.3em;
-    background-color: rgb(40, 74, 40);
+    background-color: var(--eerieBlack);
+    border-bottom: 1px solid var(--yellowGreen);
 }
 
 .dashboard,
 .listaLCR,
-.cadastroLCR {
+.cadastroLCR,
+.exit {
     text-decoration: none;
-    color: whitesmoke;
-    font-family: "Comfortaa", sans-serif;
-    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
 }
 
+.menu {
+    width: 40vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.dashboard {
+    color: var(--yellowGreen);
+}
 
 .listaLCR {
-    margin-left: 55em;
+    color: var(--steelBlue);
 }
 
 .cadastroLCR {
-    margin-right: 1em;
+    color: var(--ultraViolet);
+}
+
+.exit {
+    margin-left: 45em;
+    color: var(--raspbarry);
 }
