@@ -1,4 +1,4 @@
-.container {
+.containerLogin {
     display: flex;
     align-items: top;
     padding: 5em;
@@ -104,25 +104,26 @@
     margin-top: 2.5em;
 }
 
-.form {
+.formLogin {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: "Poppins", sans-serif;
 }
 
-.form label {
+.formLogin label {
     color: var(--yellowGreen);
     letter-spacing: .1em;
     font-size: 16px;
-    margin-top: .5em;
-    margin-left: 1em;
-
+    margin-left: -15em;
+    margin-top: .7em;
+    margin-bottom: .2em;
 }
 
-input {
-    margin-bottom: 1em;
+.formLogin input {
+    margin-bottom: .7em;
     height: 3em;
+    width: 20em;
     border-radius: 5px;
     border: solid 1.5px var(--yellowGreen);
     background-color: var(--eerieBlack);
@@ -132,22 +133,22 @@ input {
     letter-spacing: .1em;
 }
 
-::placeholder {
-    color: var(--whiteSmoke);
+input::placeholder {
     font-family: "Poppins", sans-serif;
     font-size: 13px;
     letter-spacing: .1em;
+    padding: .5em;
 }
 
 
 .redirect {
-    margin-top: 1.8em;
+    margin-top: 1.9em;
     font-size: 16px;
     text-decoration: none;
     color: var(--raspbarry);
 }
 
-.link {
+.linkLogin {
     text-decoration: none;
     color: var(--yellowGreen);
 }
@@ -156,6 +157,6 @@ input {
     background-color: var(--steelBlue);
     color: var(--whiteSmoke);
 }
-.link:hover {
+.linkLogin:hover {
     color: var(--steelBlue);
 }

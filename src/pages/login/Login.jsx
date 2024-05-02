@@ -28,7 +28,7 @@ function Login() {
     }, [users])
 
     return (
-        <div className={style.container}>
+        <div className={style.containerLogin}>
             <div className={style.viewOne}>
                 <h2>Usuários Cadastrados</h2>
                 <div className={style.usersContent}>
@@ -48,7 +48,7 @@ function Login() {
                     <p>Faça login para ver os locais de coleta disponíveis perto de você.</p>
                 </div>
 
-                <form className={style.form}>
+                <form className={style.formLogin}>
                     <label htmlFor="email">Email</label>
                     <input type="email"
                         id="email"
@@ -66,7 +66,7 @@ function Login() {
                     />
 
                         <button className={style.btnLogin} onClick={() => realizarLogin()}>Login</button>
-                        <p className={style.redirect}>Não tem uma conta? <Link to="/CadastroUser" className={style.link}>Cadastre-se!</Link> </p>
+                        <p className={style.redirect}>Não tem uma conta? <Link to="/CadastroUser" className={style.linkLogin}>Cadastre-se!</Link> </p>
                 </form>
             </div>
         </div>
