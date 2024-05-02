@@ -1,4 +1,4 @@
-.container {
+.containerUser {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,56 +28,59 @@
     color: var(--yellowGreen);
 }
 
-.form {
+.formUser {
     display: flex;
     flex-direction: column;
-    columns: 4;
     justify-content: center;
     flex-wrap: wrap;
     width: 30em;
-    height: 30em;
+    height: 25em;
     padding: 20px;
     border-radius: 10px;
     gap: .5em;
     margin-left: -33em;
 }
 
-.form label {
+.formUser label {
+    display: flex;
     color: var(--yellowGreen);
     font-family: "Poppins", sans-serif;
     letter-spacing: .1em;
+    width: 21em;
+    margin-bottom: .5em;
 }
 
-.form input {
-    width: 20em;
-    height: 3em;
-    background-color: var(--eerieBlack);
-    color: var(--whiteSmoke);
-    border: 1.5px solid var(--steelBlue);
-    border-radius: 5px;
-    padding: .5em;
-}
-
-.select {
-    display: flex;
-    width: 22.5em;
+.formUser input {
+    width: 23em;
     height: 3.3em;
     background-color: var(--eerieBlack);
     color: var(--whiteSmoke);
     border: 1.5px solid var(--steelBlue);
     border-radius: 5px;
+    padding: .5em;
+    margin-bottom: .3em;
+}
+
+.selectUser {
+    display: flex;
+    width: 23em;
+    height: 3.3em;
+    background-color: var(--eerieBlack);
+    color: rgb(194, 194, 198);
+    border: 1.5px solid var(--steelBlue);
+    border-radius: 5px;
     font-family: "Poppins", sans-serif;
     letter-spacing: .1em;
-    margin-bottom: 1.3em;
+    margin-bottom: .3em;
     padding: .5em;
 }
 
-.register {
+.registerUser {
     height: 5em;
     display: flex;
    justify-content: center;
    align-items: center;
-   margin-bottom: 3em;
+   margin-bottom: 1em;
    
 }
 .btnRegister {
@@ -99,7 +102,7 @@
     color: var(--whiteSmoke);
 }
 
-.register p {
+.registerUser p {
     font-family: "Poppins", sans-serif;
     text-align: center;
     margin-left: 2em;
@@ -108,13 +111,13 @@
     letter-spacing: .1em;
 }
 
-.link {
+.linkUser {
     text-decoration: none;
     font-weight: bolder;
     color: var(--yellowGreen);
 }
 
-.link:hover {
+.linkUser:hover {
     color: var(--steelBlue);
 }
 
