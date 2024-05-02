@@ -8,7 +8,6 @@ import CadastroUser from '../pages/cadastroUser/CadastroUser'
 import Dashboard from '../pages/dashboard/Dashboard'
 import ListagemLCR from '../pages/listagemLCR/ListagemLCR'
 import CadastroLCR from '../pages/cadastroLCR/CadastroLCR'
-import EditLocal from '../pages/listagemLCR/editLocal'
 
 
 //verifica se o usuário está autenticado, limitando ou não o acesso a páginas privadas
@@ -49,10 +48,6 @@ const routers = createBrowserRouter([
             {
                 path: '/CadastroLCR',
                 element: <CadastroLCR />,
-            },
-            {
-                path: '/ListagemLCR/:id',
-                element: <EditLocal />,
             }
         ]
     }

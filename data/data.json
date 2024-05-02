@@ -16,21 +16,6 @@
       "id": 1
     },
     {
-      "name": "Bernardo Thales Corte Real",
-      "cpf": "654.777.178-40",
-      "born": "25/01/2005",
-      "sex": "Masculino",
-      "email": "bernardo-cortereal72@gruposantin.com.br",
-      "password": "hs2kzm6Dh2",
-      "cep": "45658-695",
-      "address": "3ª Travessa da Esperança",
-      "number": 309,
-      "neighborhood": "Esperança",
-      "city": "Ilhéus",
-      "state": "BA",
-      "id": 2
-    },
-    {
       "name": "Danilo Samuel Novaes",
       "cpf": "396.761.601-05",
       "born": "20/03/1972",
@@ -104,7 +89,7 @@
       "city": "Florianópolis",
       "state": "SC",
       "coordinates": " -27.588642, -47.546766",
-      "type": "Papel, Plástico, Metal"
+      "type": "papel, plástico e metal"
     },
     {
       "id": 2,
@@ -118,7 +103,7 @@
       "city": "Florianópolis",
       "state": "SC",
       "coordinates": "-27.585363, -48.553581",
-      "type": "Vidro, Papel e Plástico"
+      "type": "vidro, papel e plástico"
     },
     {
       "id": 3,
@@ -132,7 +117,7 @@
       "city": "Florianópolis",
       "state": "SC",
       "coordinates": " -27.589742, -48.546766",
-      "type": "Baterias e Plástico"
+      "type": "baterias e plástico"
     },
     {
       "id": 4,
@@ -146,7 +131,7 @@
       "city": "Florianópolis",
       "state": "SC",
       "coordinates": " -17.589742, -28.546136",
-      "type": "Papel, Plástico, Metal"
+      "type": "papel, plástico metal"
     },
     {
       "id": 5,
@@ -160,7 +145,7 @@
       "city": "Florianópolis",
       "state": "SC",
       "coordinates": " -27.589742, -48.546136",
-      "type": "Plástico, Vidro"
+      "type": "plástico e vidro"
     },
     {
       "id": 6,
@@ -174,7 +159,7 @@
       "city": "Florianópolis",
       "state": "SC",
       "coordinates": " -27.589742, -48.546136",
-      "type": "Papel, Plástico, Metal, Vidro, Orgânico"
+      "type": "papel, plástico, metal, vidro e orgânico"
     },
     {
       "id": 7,
@@ -188,7 +173,7 @@
       "city": "Florianópolis",
       "state": "SC",
       "coordinates": " -27.589742, -48.546136",
-      "type": "Papel, Plástico"
+      "type": "papel e plástico"
     },
     {
       "id": 8,
@@ -202,7 +187,7 @@
       "city": "Florianópolis",
       "state": "SC",
       "coordinates": " -27.589742, -48.546136",
-      "type": "Papel, Plástico, Metal, Vidro"
+      "type": "papel, plástico, metal e vidro"
     },
     {
       "id": 9,
@@ -216,7 +201,7 @@
       "city": "Florianópolis",
       "state": "SC",
       "coordinates": " -27.589742, -48.546136",
-      "type": "Papel, Orgânico"
+      "type": "papel e orgânico"
     },
     {
       "id": 10,
@@ -230,7 +215,7 @@
       "city": "Florianópolis",
       "state": "SC",
       "coordinates": " -27.589742, -48.546136",
-      "type": "Metal, Baterias"
+      "type": "metal e baterias"
     }
   ]
 }

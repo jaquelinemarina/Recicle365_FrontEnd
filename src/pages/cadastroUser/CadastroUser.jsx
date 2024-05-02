@@ -4,53 +4,23 @@ import { UsersContext } from '../../context/usersContext'
 import { useContext, useState, useEffect } from 'react'
 import { Link } from "react-router-dom"
 
-//----------------------------------------------------------------
+//-------------------------------------------------------------------------------
 // O QUE FALTA:
-// - tratar o erro de cpf já cadastrado - NÃO FUNCIONA
-// - usar dados da API ViaCEP para preenchimento automaticamatico
+// - usar dados da API ViaCEP para preenchimento automaticamatico - NÃO FUNCIONA
 // EXTRAS:
 // - impedir que o input type="text" aceite numeros
-// ---------------------------------------------------------------
+// ------------------------------------------------------------------------------
 
 function CadastroUser() {
 
-    const { register, handleSubmit, formState: { errors } } = useForm()
+    const { register, handleSubmit, setValue, getValues, setFocus, formState: { errors } } = useForm()
 
-    const { registerUser } = useContext(UsersContext)
+    const { registerUser, users } = useContext(UsersContext)
 
-    // estado para armazenar os valores do formulário
-    const [newUser, setNewUser] = useState({
-        name: "",
-        cpf: "",
-        born: "",
-        sex: "",
-        email: "",
-        password: "",
-        cep: "",
-        address: "",
-        number: "",
-        neighborhood: "",
-        city: "",
-        state: "",
-    })
-
-    // ---------------------------------------------------------------
-    // tratar o erro de cpf já cadastrado
-    
-    useEffect(() => {
-        fetch('http://localhost:3000/users')
-            .then(response => response.json())
-            .then(data => {
-                console.log(data)
-                setNewUser(data)
-            })
-            .catch(error => console.error('Erro ao obter usuários:', error));
-    }, []);
-
-    //função para enviar o formulário e validar se o CPF já existe
     function onSubmit(formValue) {
 
-        const cpfExists = newUser.some(newUser => newUser.cpf === formValue.cpf);
+        // validando se o CPF já está cadastrado
+        const cpfExists = users.some(x => x.cpf === Number(formValue.cpf))
 
         if (cpfExists) {
             console.log("CPF já cadastrado")
@@ -68,7 +38,22 @@ function CadastroUser() {
             })
         }
     }
-    // ---------------------------------------------------------------
+
+    // função para buscar o CEP na API ViaCEP
+    const checkCEP = () => {
+        const cep = getValues('cep')
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                setValue('address', data.logradouro)
+                setValue('neighborhood', data.bairro)
+                setValue('city', data.localidade)
+                setValue('state', data.uf)
+                setFocus('number')
+            })
+            .catch(error => console.error('Erro ao obter CEP:', error))
+    }
 
     return (
         <div className={style.container}>
@@ -159,6 +144,7 @@ function CadastroUser() {
                     <input placeholder="digite o CEP"
                         type="number"
                         {...register("cep", {
+                            onBlur: () => checkCEP(),
                             required: "Campo obrigatório.",
                             minLength: { value: 3, message: "Insira um número válido" },
                             maxLength: { value: 9, message: "Máximo 9 caracteres" },
