@@ -61,14 +61,16 @@ function CadastroLCR() {
     }
 
     return (
-        <div className={style.container}>
-            <h1 className={style.title}>Juntos, podemos fazer a diferença!</h1>
-            <h2 className={style.subtitle}>Cadastre um local de coleta de resíduos.</h2>
+        <div className={style.containerLCR}>
+            <div className={style.titleLCR}>
+                <h1>Juntos, podemos fazer a diferença.</h1>
+                <h2>Cadastre um local de coleta de resíduos.</h2>
+            </div>
 
-            <form className={style.form} onSubmit={handleSubmit(onSubmit)}>
+            <form className={style.formLCR} onSubmit={handleSubmit(onSubmit)}>
 
                 <div className={style.cpf}> {/* pegar dados do 4Devs */}
-                    <label htmlFor="cpf">Digite o seu identificador de usuário (CPF)</label>
+                    <label htmlFor="cpf">Identificador de usuário (CPF)</label>
                     <input placeholder="digite seu CPF"
                         type="number"
                         {...register("cpf", {
@@ -120,8 +122,8 @@ function CadastroLCR() {
                 </div>
 
                 <div className={style.address}> {/* usar dados da API ViaCEP - provavelmente para preenchimento automático */}
-                    <label htmlFor="address">Endereço</label>
-                    <input placeholder="digite o seu endereço"
+                    <label htmlFor="address">Rua</label>
+                    <input placeholder="digite o nome da rua"
                         type="text"
                         {...register("address", {
                             required: "Campo obrigatório.",
@@ -134,7 +136,7 @@ function CadastroLCR() {
 
                 <div className={style.number}>
                     <label htmlFor="number">Número</label>
-                    <input placeholder="digite o número da sua residência"
+                    <input placeholder="digite o número"
                         type="number"
                         {...register("number", {
                             required: "Campo obrigatório.",
@@ -147,7 +149,7 @@ function CadastroLCR() {
 
                 <div className={style.neighborhood}>
                     <label htmlFor="neighborhood">Bairro</label>
-                    <input placeholder="digite o seu bairro"
+                    <input placeholder="digite o bairro"
                         type="text"
                         {...register("neighborhood", {
                             required: "Campo obrigatório.",
@@ -172,7 +174,7 @@ function CadastroLCR() {
 
                 <div className={style.state}>
                     <label htmlFor="state">Estado</label>
-                    <select name="state" id="state"
+                    <select className={style.select} name="state" id="state"
                         {...register("state", {
                             required: "Por favor, selecione uma opção."
                         })}>
@@ -220,50 +222,63 @@ function CadastroLCR() {
                     {errors?.coordinates && <p>{errors.coordinates.message}</p>}
                 </div>
 
+                <h3 className={style.typeTitle}>Tipos de resíduos aceitos:</h3>
                 <div className={style.type}>
-                    <label>Tipos de resíduos aceitos:</label>
 
-                    <label htmlFor="type">Plástico</label>
-                    <input type="checkbox" value="Plástico"
-                        {...register('type', {
-                            required: 'Por favor, selecione pelo menos uma opção.'
-                        })} />
-                    <label htmlFor="type">Metal</label>
-                    <input type="checkbox" value="Metal"
-                        {...register('type', {
-                            required: 'Por favor, selecione pelo menos uma opção.'
-                        })} />
-                    <label htmlFor="type">Vidro</label>
-                    <input type="checkbox" value="Vidro"
-                        {...register('type', {
-                            required: 'Por favor, selecione pelo menos uma opção.'
-                        })} />
-                    <label htmlFor="type">Papel</label>
-                    <input type="checkbox" value="Papel"
-                        {...register('type', {
-                            required: 'Por favor, selecione pelo menos uma opção.'
-                        })} />
-                    <label htmlFor="type">Baterias</label>
-                    <input type="checkbox" value="Baterias"
-                        {...register('type', {
-                            required: 'Por favor, selecione pelo menos uma opção.'
-                        })} />
-                    <label htmlFor="type">Orgânicos</label>
-                    <input type="checkbox" value="Orgânicos"
-                        {...register('type', {
-                            required: 'Por favor, selecione pelo menos uma opção.'
-                        })} />
-                    <label htmlFor="type">Outros</label>
-                    <input type="checkbox" value="Outros"
-                        {...register('type', {
-                            required: 'Por favor, selecione pelo menos uma opção..'
-                        })} />
+                    <div className={style.typeInput}>
+                        <input type="checkbox" value="plástico"
+                            {...register('type', {
+                                required: 'Por favor, selecione pelo menos uma opção.'
+                            })} />
 
-                    {errors?.type && <p>{errors.type.message}</p>}
+                        <input type="checkbox" value="metal"
+                            {...register('type', {
+                                required: 'Por favor, selecione pelo menos uma opção.'
+                            })} />
+
+                        <input type="checkbox" value="vidro"
+                            {...register('type', {
+                                required: 'Por favor, selecione pelo menos uma opção.'
+                            })} />
+
+                        <input type="checkbox" value="papel"
+                            {...register('type', {
+                                required: 'Por favor, selecione pelo menos uma opção.'
+                            })} />
+
+                        <input type="checkbox" value="baterias"
+                            {...register('type', {
+                                required: 'Por favor, selecione pelo menos uma opção.'
+                            })} />
+
+                        <input type="checkbox" value="orgânico"
+                            {...register('type', {
+                                required: 'Por favor, selecione pelo menos uma opção.'
+                            })} />
+
+                        <input type="checkbox" value="outros"
+                            {...register('type', {
+                                required: 'Por favor, selecione pelo menos uma opção..'
+                            })} />
+
+                        {errors?.type && <p>{errors.type.message}</p>}
+                    </div>
+
+                    <div className={style.typeLabel}>
+                        <label htmlFor="type">Plástico</label>
+                        <label htmlFor="type">Metal</label>
+                        <label htmlFor="type">Vidro</label>
+                        <label htmlFor="type">Papel</label>
+                        <label htmlFor="type">Baterias</label>
+                        <label htmlFor="type">Orgânico</label>
+                        <label htmlFor="type">Outros</label>
+                    </div>
+
+                    <div className={style.buttons}>
+                        <button className={style.btnRegisterLocal} type="submit">Salvar</button>
+                        <Link className={style.linkLCR} to="/listagemLCR">Locais de Coleta de Resíduos</Link> {/* solução temporária de redirecionamento */}
+                    </div>
                 </div>
-
-                <button className={style.btnRegisterLocal} type="submit">Salvar</button>
-                <Link to="/listagemLCR">Lista de Locais de Coleta de Resíduos</Link> {/* solução temporária de redirecionamento */}
             </form>
         </div>
     )
