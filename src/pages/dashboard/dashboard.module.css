@@ -45,9 +45,16 @@ h3 {
 }
 
 .viewOne h3 {
+    display: flex;
     margin-top: -5em;
     letter-spacing: .1em;
     font-size: 27px;
+}
+
+.viewOne p {
+   color: var(--ultraViolet);
+   font-size: 27px;
+   margin-top: -.0em;
 }
 
 .subtitle {
@@ -211,4 +218,16 @@ h3 {
 }
 ::-webkit-scrollbar-thumb {
     background: var(--raspbarry);
+}
+
+.card:hover {
+    background-color: var(--ultraViolet);
+}
+
+.subtitle:hover {
+    color: var(--ultraViolet);
+}
+
+.link:hover {
+    color: var(--ultraViolet);
 }

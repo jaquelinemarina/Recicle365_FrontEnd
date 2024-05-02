@@ -151,3 +151,11 @@ input {
     text-decoration: none;
     color: var(--yellowGreen);
 }
+
+.btnLogin:hover {
+    background-color: var(--steelBlue);
+    color: var(--whiteSmoke);
+}
+.link:hover {
+    color: var(--steelBlue);
+}

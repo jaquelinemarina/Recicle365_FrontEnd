@@ -37,14 +37,14 @@ function Dashboard() {
                         você está contribuindo para um futuro mais sustentável e ajudando a proteger o meio ambiente.
                     </span>
                 </div>
-                <h3>Explore o Recicle365 e descubra como você pode fazer a diferença.</h3>
+                <h3>Explore o <p>Recicle365</p> e descubra como você pode fazer a diferença.</h3>
             </div>
 
             <div className={style.viewTwo}>
                 <div className={style.list}>
                     <div className={style.listTitle}>
                         <h1>Preserve o meio ambiente.</h1>
-                        <h3>Descubra onde descartar seus resíduos de forma responsável <Link to="/ListagemLCR" className={style.link}>clicando aqui!</Link></h3>
+                        <h3>Descubra onde descartar seus resíduos de forma responsável <Link className={style.link} to="/ListagemLCR">clicando aqui.</Link></h3>
                     </div>
 
                     <div className={style.locals}>
