@@ -84,7 +84,7 @@ input::placeholder {
     display: flex;
     flex-direction: row;
     width: 2.3em;
-    height: 26em;
+    height: 25.2em;
     border: 1.5px solid var(--ultraViolet);
     border-radius: 5px;
     padding: .6em;
@@ -107,7 +107,7 @@ input::placeholder {
     letter-spacing: .1em;
     font-size: 15px;
     margin-left: 1em;
-    gap: 1.8em;
+    gap: 1.65em;
 }
 
 .type input {
