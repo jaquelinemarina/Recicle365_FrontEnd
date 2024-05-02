@@ -41,11 +41,6 @@ function Dashboard() {
             </div>
 
             <div className={style.viewTwo}>
-                <div className={style.cards}>
-                    <div className={style.card}> <CardLocals /> </div>
-                    <div className={style.card}>  <CardUsers /></div>
-                </div>
-
                 <div className={style.list}>
                     <div className={style.listTitle}>
                         <h1>Preserve o meio ambiente.</h1>
@@ -54,18 +49,26 @@ function Dashboard() {
 
                     <div className={style.locals}>
                         {!!locals && locals.map((local) => (
-                            <div key={local.id}>
+                            <div key={local.id} className={style.local}>
                                 <h2>{local.name}</h2>
                                 <p>{local.city} / {local.state}</p>
-                                <h4>Resíduos aceitos: {local.type}</h4>
+                                <p>Resíduos aceitos: {local.type}</p>
                             </div>
                         ))}
                     </div>
                 </div>
+
+                <div className={style.cards}>
+                    <div className={style.card}> <CardLocals /> </div>
+                    <div className={style.card}>  <CardUsers /></div>
+                </div>
             </div>
 
             <div className={style.map}>
-                <h1>Cuide do planeta, encontre o local de coleta mais próximo de você. </h1>
+                <div className={style.mapTitle}>
+                    <h1>Cuide do planeta, </h1>
+                    <h2>encontre o local de coleta mais próximo de você. </h2>
+                </div>
                 <Map />
             </div>
         </div >
