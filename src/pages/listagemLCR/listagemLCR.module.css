@@ -1,29 +1,176 @@
-.container {
+.containerList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 86.3vh;
+    gap: 2em;
+    background-color: var(--eerieBlack);
+    color: var(--whiteSmoke);
+}
+
+.titleList h1 {
+    font-size: 30px;
+    font-family: "Poiret One", sans-serif;
+    letter-spacing: .1em;
+    color: var(--raspbarry);
+    margin-left: 3em;
+    margin-bottom: .5em;
+}
+
+.localsContent {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
+    gap: 1em;
+    width: 45vw;
+    height: 65vh;
+    margin-left: 5em;
+    overflow: auto;
+    border: solid 2px var(--raspbarry);
+    border-radius: 10px;
     gap: 2em;
 }
 
-.cardsContent {
+.localList {
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    gap: 2.5em;
-}
-
-.local {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    padding: 15px;
-    border: 1px solid #000;
+    width: 35vw;
+    padding: 2em;
+    border: solid 1px var(--raspbarry);
     border-radius: 10px;
-    width: 30em;
-    height: 15em;
 }
 
-p {
-    margin: .5em;
+.localList h2 {
+    font-size: 24px;
+    font-family: "Poiret One", sans-serif;
+    letter-spacing: .1em;
+    color: var(--steelBlue);
+    margin-bottom: .5em;
+    margin-left: .3em;
+}
+
+.localList span {
+    color: var(--raspbarry);
+}
+
+.localList p {
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: .1em;
+    color: rgb(194, 194, 198);
+    margin-bottom: .3em;
+}
+
+.buttonsList{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5em;
+    margin-top: 1em;
+}
+
+.btnEdit, .btnDelete{
+    background-color: var(--steelBlue);
+    color: var(--eerieBlack);
+    border: none;
+    height: 2.3em;
+    width: 7em;
+    padding: .5em;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: .1em;
+    cursor: pointer;
+}
+
+.imgList {
+    margin-left: 5em;
+}
+
+.editLocals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    width: 45vw;
+    position: absolute;
+    margin-left: 46em;
+    background-color: var(--eerieBlack);
+}
+
+.editForm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1em;
+    width: 35vw;
+    height: 75vh;
+    padding: 2em;
+    border: solid 1px var(--ultraViolet);
+    border-radius: 10px;
+    margin-top: -2em;
+}
+
+.editForm label {
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: .1em;
+    color: var(--yellowGreen);
+    margin-bottom: -.8em;
+}
+
+.editForm input {
+    width: 15vw;
+    height: 2.5em;
+    padding: .5em;
+    background-color: var(--eerieBlack);
+    color: rgb(194, 194, 198);
+    border: solid 1px var(--ultraViolet);
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: .1em;
+    margin-bottom: .5em;
+}
+
+.buttonsEditList{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5em;
+    margin-top: 1em;
+}
+
+.buttonsEditList{
+    gap: 1.5em;
+    margin-top: -5em;
+}
+
+.btnSave, .btnCancel {
+    background-color: var(--yellowGreen);
+    color: var(--eerieBlack);
+    border: none;
+    height: 2.3em;
+    width: 7em;
+    padding: .5em;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: .1em;
+    cursor: pointer;
+}
+
+.btnEdit:hover, .btnDelete:hover {
+    background-color: var(--raspbarry);
+    color: var(--whiteSmoke);
+    transition: .3s;
+}
+
+.btnSave:hover, .btnCancel:hover {
+    background-color: var(--ultraViolet);
+    color: var(--whiteSmoke);
+    transition: .3s;
 }

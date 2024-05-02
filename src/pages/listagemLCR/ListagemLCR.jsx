@@ -1,6 +1,7 @@
 import style from './listagemLCR.module.css'
 import { useContext, useState } from 'react'
 import { LocalsContext } from '../../context/localsContext'
+import RRR from '../../assets/RRR.png'
 
 // ---------------------------------------------------------------------------------------------
 // - tratar os dados dos inputs
@@ -68,31 +69,60 @@ function ListagemLCR() {
     }
 
     return (
-        <div className={style.container}>
-            <div className={style.locals}>
+        <div className={style.containerList}>
+            <div className={style.titleList}>
                 <h1>Locais de Coleta de Resíduos</h1>
-                {!!locals && Array.isArray(locals) && locals.map((local) => (
-                    <div key={local.id}>
-                        <h2>{local.name}</h2>
-                        <p>Descrição: {local.description}</p>
-                        <p>CEP: {local.cep}</p>
-                        <p>Endereço: {local.address}, {local.number} - {local.neighborhood}</p>
-                        <p>{local.city} / {local.state}</p>
-                        <p>Coordenadas: {local.coordinates}</p>
-                        <p>Tipo de resíduos aceitos: {local.type}</p>
+                <div className={style.localsContent}>
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br /> <br /> <br />  <br /> <br /> <br />
+                    <br/> <br />
+                    {!!locals && Array.isArray(locals) && locals.map((local) => (
+                        <div key={local.id} className={style.localList}>
+                            <h2>{local.name}</h2>
+                            <p>Tipo de resíduos aceitos: <span>{local.type}</span></p>
+                            <p>Endereço: {local.address}, {local.number} - {local.neighborhood}</p>
+                            <p>{local.city} / {local.state}</p>
+                            <p>CEP: {local.cep}</p>
+                            <p>Coordenadas: {local.coordinates}</p>
+                            <p>Descrição: {local.description}</p>
 
-                        <div className={style.buttons}>
-                            <button onClick={() => handleEdit(local.id)}>Editar</button>
-                            <button onClick={() => deleteLocal(local.id)}>Excluir</button>
+                            <div className={style.buttonsList}>
+                                <button className={style.btnEdit} onClick={() => handleEdit(local.id)}>Editar</button>
+                                <button className={style.btnDelete} onClick={() => deleteLocal(local.id)}>Excluir</button>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                    <br />
+                </div>
             </div>
+
+            <img className={style.imgList} src={RRR} width={500} alt="Reciclar, Reutilizar, Reduzir" />
 
             {/* MODO DE EDIÇÃO */}
             {editMode && localEditing && (
                 <div className={style.editLocals}>
-                    <h1>Editar Local</h1>
                     <form className={style.editForm}>
                         <label htmlFor="name">Nome do local</label>
                         <input name="name" placeholder="digite o nome do local" type="text" value={localEditing.name} onChange={handleChange} />
@@ -107,7 +137,7 @@ function ListagemLCR() {
                         <input name="address" placeholder="digite o endereço" type="text" value={localEditing.address} onChange={handleChange} />
 
                         <label htmlFor="number">Número</label>
-                        <input name="number" placeholder="digite o número" type="text" value={localEditing.number} onChange={handleChange} />
+                        <input name="number" placeholder="digite o número" type="text" value={localEditing.number} onChange={handleChange} /> <br /> <br />
 
                         <label htmlFor="neighborhood">Bairro</label>
                         <input name="neighborhood" placeholder="digite o bairro" type="text" value={localEditing.neighborhood} onChange={handleChange} />
@@ -123,11 +153,11 @@ function ListagemLCR() {
 
                         <label htmlFor="type">Tipo de resíduos aceitos</label>
                         <input name="type" placeholder="digite o tipo de resíduos aceitos" type="text" value={localEditing.type} onChange={handleChange} />
-                    </form>
 
-                    <div className={style.buttons}>
-                        <button onClick={handleSaveChanges} disabled={isSaving}>Salvar</button>
-                        <button onClick={(e) => handleCancelEdit(e)}>Cancelar</button>
+                    </form>
+                    <div className={style.buttonsEditList}>
+                        <button className={style.btnSave} onClick={handleSaveChanges} disabled={isSaving}>Salvar</button>
+                        <button className={style.btnCancel} onClick={(e) => handleCancelEdit(e)}>Cancelar</button>
                     </div>
                 </div>
             )}
