@@ -276,7 +276,7 @@ function CadastroLCR() {
 
                     <div className={style.buttons}>
                         <button className={style.btnRegisterLocal} type="submit">Salvar</button>
-                        <Link className={style.linkLCR} to="/listagemLCR">Locais de Coleta de Resíduos</Link> {/* solução temporária de redirecionamento */}
+                        <Link className={style.linkLCR} to="/listagemLCR">Locais de Coleta</Link> {/* solução temporária de redirecionamento */}
                     </div>
                 </div>
             </form>

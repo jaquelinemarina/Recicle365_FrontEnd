@@ -5,9 +5,10 @@
     align-items: center;
     background-color: var(--eerieBlack);
     color: var(--whiteSmoke);
-    height: 100vh;
+    height: 86.3vh;
 }
-.titleLCR{
+
+.titleLCR {
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -18,6 +19,7 @@
     font-family: "Poiret One", cursive;
     letter-spacing: .2em;
     color: var(--yellowGreen);
+    margin-top: 1em;
 }
 
 .titleLCR h2 {
@@ -26,9 +28,10 @@
     font-size: 17px;
     letter-spacing: .2em;
     margin-top: .8em;
-    margin-bottom: 1em;
+    margin-bottom: -.9em;
     font-weight: lighter;
 }
+
 .formLCR {
     display: flex;
     flex-direction: column;
@@ -38,11 +41,11 @@
     height: 32em;
     padding: 20px;
     border-radius: 10px;
-    gap: .5em;
+    gap: .6em;
     margin-left: -48em;
 }
 
- .formLCR label{
+.formLCR label {
     display: flex;
     width: 25em;
     padding: 5px;
@@ -55,6 +58,8 @@
 .formLCR input {
     width: 23em;
     height: 3.3em;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: .1em;
     background-color: var(--eerieBlack);
     color: var(--whiteSmoke);
     border: 1.5px solid var(--ultraViolet);
@@ -76,7 +81,6 @@ input::placeholder {
     border-radius: 5px;
     font-family: "Poppins", sans-serif;
     letter-spacing: .1em;
-    margin-bottom: 1em;
     padding: .5em;
 }
 
@@ -88,6 +92,7 @@ input::placeholder {
     border: 1.5px solid var(--ultraViolet);
     border-radius: 5px;
     padding: .6em;
+    margin-bottom: .9em;
 }
 
 .typeTitle {
@@ -95,8 +100,9 @@ input::placeholder {
     font-family: "Poppins", sans-serif;
     letter-spacing: .1em;
     font-size: 18px;
-   position: relative;
-   margin-bottom: 1em;
+    position: relative;
+    margin-bottom: 1em;
+    margin-top: -.5em;
 }
 
 .typeLabel {
@@ -105,9 +111,9 @@ input::placeholder {
     color: var(--yellowGreen);
     font-family: "Poppins", sans-serif;
     letter-spacing: .1em;
-    font-size: 15px;
+    font-size: 16px;
     margin-left: 1em;
-    gap: 1.65em;
+    gap: 1.5em;
 }
 
 .type input {
@@ -124,9 +130,10 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1em;
-    margin-top: 21em;
-    margin-left: -10em;
+    align-items: center;
+    gap: 1.2em;
+    margin-top: 20em;
+    margin-left: -13em;
     cursor: pointer;
     font-family: "Poppins", sans-serif;
 }
@@ -142,22 +149,26 @@ input::placeholder {
     font-size: 18px;
     font-weight: bold;
     letter-spacing: .1em;
-    margin-left: -2.1em;
     padding: .2em;
 }
 
 .linkLCR {
-    width: 15em;
+    width: 11.3em;
     text-decoration: none;
-    color: var(--steelBlue);
-    margin-left: -4em;
+    color: var(--yellowGreen);
+    border: solid 1px var(--yellowGreen);
+    text-align: center;
+    padding: .3em;
+    border-radius: 5px;
 }
 
 .btnRegisterLocal:hover {
     background-color: var(--ultraViolet);
     color: var(--whiteSmoke);
+    transition: .3s;
 }
 
 .linkLCR:hover {
-    color: var(--raspbarry);
+    color: var(--ultraViolet);
+    transition: .3s;
 }
