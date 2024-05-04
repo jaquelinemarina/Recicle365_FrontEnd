@@ -94,10 +94,6 @@
     cursor: pointer;
 }
 
-.btnRegister:hover {
-    background-color: var(--steelBlue);
-    color: var(--whiteSmoke);
-}
 
 .register p {
     font-family: "Poppins", sans-serif;
@@ -114,8 +110,15 @@
     color: var(--yellowGreen);
 }
 
+.btnRegister:hover {
+    background-color: var(--steelBlue);
+    color: var(--whiteSmoke);
+    transition: .3s;
+}
+
 .link:hover {
     color: var(--steelBlue);
+    transition: .3s;
 }
 
 /* Cor de fundo do autocomplete */
