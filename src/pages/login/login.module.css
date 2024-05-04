@@ -27,11 +27,11 @@
     overflow: auto;
     overflow-x: hidden;
     height: 50vh;
-    gap: 2em;
 }
 
 .usersContent h3 {
     font-size: 20px;
+    margin-top: 1em;
     margin-bottom: .5em;
     width: 20vw;
     color: var(--steelBlue);
@@ -56,7 +56,7 @@
     border-radius: 5px;
     color: var(--raspbarry);
     font-size: 13px;
-
+    margin-bottom: 1em;
 }
 
 .btnLogin {
@@ -93,6 +93,7 @@
 .title h2 {
     color: var(--yellowGreen);
     font-family: "Poiret One", sans-serif;
+    font-size:22px;
     letter-spacing: .1em;
     margin-top: .5em;
 }
@@ -100,8 +101,11 @@
 .title p {
     color: var(--ultraViolet);
     font-family: "Poppins", sans-serif;
-    font-size: 16px;
-    margin-top: 2.5em;
+    font-size: 15px;
+    margin-top: 1.8em;
+    margin-bottom: .5em;
+    width: 30em;
+    letter-spacing: .1em;
 }
 
 .formLogin {
@@ -115,9 +119,9 @@
     color: var(--yellowGreen);
     letter-spacing: .1em;
     font-size: 16px;
-    margin-left: -15em;
-    margin-top: .7em;
-    margin-bottom: .2em;
+    margin-top: .2em;
+    margin-left: 1em;
+
 }
 
 .formLogin input {
@@ -129,11 +133,13 @@
     background-color: var(--eerieBlack);
     outline: none;
     color: var(--whiteSmoke);
+    font-family: "Poppins", sans-serif;
     font-size: 15px;
     letter-spacing: .1em;
 }
 
 input::placeholder {
+    color: var(--whiteSmoke);
     font-family: "Poppins", sans-serif;
     font-size: 13px;
     letter-spacing: .1em;
@@ -156,7 +162,9 @@ input::placeholder {
 .btnLogin:hover {
     background-color: var(--steelBlue);
     color: var(--whiteSmoke);
+    transition: .3s;
 }
 .linkLogin:hover {
     color: var(--steelBlue);
+    transition: .3s;
 }

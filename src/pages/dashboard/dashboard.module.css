@@ -46,9 +46,9 @@ h3 {
 
 .viewOne h3 {
     display: flex;
-    margin-top: -5em;
+    margin-top: -6em;
     letter-spacing: .1em;
-    font-size: 27px;
+    font-size: 24px;
 }
 
 .viewOne p {
@@ -61,7 +61,7 @@ h3 {
 
 .subtitle {
     width: 82vw;
-    height: 24vh;
+    height: 21vh;
     text-align: center;
     font-family: "Poppins", sans-serif;
     color: var(--whiteSmoke);
@@ -77,14 +77,14 @@ h3 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    margin-top: -2em;
-    gap: 6em;
+    margin-top: -3em;
+    gap: 10em;
 }
 
 .cards {
     display: flex;
     flex-direction: column;
-    margin-top: 8em;
+    margin-top: 6em;
     gap: 5em;
 }
 
@@ -129,12 +129,12 @@ h3 {
 .listTitle h1 {
     margin-bottom: .8em;
     letter-spacing: .2em;
+    font-size: 34px;
 }
 
 .listTitle h3 {
-    font-size: 20px;
+    font-size: 18px;
     width: 28em;
-    
     margin-bottom: -1em;
 }
 
@@ -199,6 +199,7 @@ h3 {
 
 .map h1 {
     font-family: "Poiret One", sans-serif;
+    font-size: 34px;
     color: var(--yellowGreen);
     letter-spacing: .2em;
     margin-bottom: .4em;
@@ -207,10 +208,10 @@ h3 {
 .map h2 {
     font-family: "Poppins", sans-serif;
     font-weight: lighter;
+    font-size: 24px;
     letter-spacing: .1em;
     color: var(--ultraViolet);
 }
-
 
 ::-webkit-scrollbar-track {
     background-color: var(--eerieBlack);
@@ -224,12 +225,10 @@ h3 {
 
 .card:hover {
     background-color: var(--ultraViolet);
+    transition: .3s;
 }
 
-.subtitle:hover {
+.subtitle:hover, .link:hover{
     color: var(--ultraViolet);
-}
-
-.link:hover {
-    color: var(--ultraViolet);
+    transition: .3s;
 }

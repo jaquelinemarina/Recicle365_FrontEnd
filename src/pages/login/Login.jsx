@@ -43,7 +43,7 @@ function Login() {
 
             <div className={style.login}>
                 <div className={style.title}>
-                    <img src={logo} width={300} alt='logo Recile365' />
+                    <img src={logo} width={320} alt='logo Recile365' />
                     <h2>Sua ação faz a diferença.</h2>
                     <p>Faça login para ver os locais de coleta disponíveis perto de você.</p>
                 </div>
