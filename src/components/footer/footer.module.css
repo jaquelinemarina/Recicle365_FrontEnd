@@ -6,26 +6,33 @@
     width: 100vw;
     height: 2.7em;
     background-color: var(--eerieBlack);
-    color: whitesmoke;
+    color: rgb(194, 194, 198);
     border-top: 1px solid var(--yellowGreen);
 }
 
 .p {
-    font-family: "poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: .1em;
     font-size: 13.5px;
-    color: whitesmoke;
+    color: rgb(194, 194, 198);
+    margin-right: 11em;
 }
 
 i {
     font-size: 1.5em;
-    color: whitesmoke;
+    color: rgb(194, 194, 198);
 }
 
 .social {
     margin-top: .2em;
-    margin-left: 60em;
+    margin-left: 56em;
 }
 
 .github {
     margin-right: 1.2em;
+}
+
+p:hover, i:hover{
+    color: var(--yellowGreen);
+    transition: 0.3s;
 }
