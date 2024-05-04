@@ -9,11 +9,11 @@ function Header() {
     return (
         <header className={style.container}>
             <div className={style.menu}>
-                <Link to="/" className={style.dashboard}>Recicle365</Link>
+                <Link to="/dashboard" className={style.dashboard}>Recicle365</Link>
                 <Link to="/ListagemLCR" className={style.listaLCR}>Locais de Coleta</Link>
                 <Link to="/CadastroLCR" className={style.cadastroLCR}>Cadastrar Local de Coleta</Link>
             </div>
-            <Link to="/Login" className={style.exit}>Sair</Link>
+            <Link to="/" className={style.exit}>Sair</Link>
         </header>
     )
 }
