@@ -32,7 +32,6 @@ function Dashboard() {
                 <div className={style.subtitle}>
                     <span>Você sabia que reciclar uma lata de alumínio economiza energia suficiente para manter uma TV ligada por três horas?<br />
                         E que a reciclagem de uma tonelada de papel salva cerca de 17 árvores e evita o desperdício de 7.000 galões de água?<br />
-                        E que uma tonelada de plástico reciclado economiza energia equivalente a 1.000-2.000 galões de gasolina?<br />
                         Ao descartar seus resíduos de forma consciente e apoiar iniciativas de reciclagem, <br />
                         você está contribuindo para um futuro mais sustentável e ajudando a proteger o meio ambiente.
                     </span>
@@ -44,7 +43,7 @@ function Dashboard() {
                 <div className={style.list}>
                     <div className={style.listTitle}>
                         <h1>Preserve o meio ambiente.</h1>
-                        <h3>Descubra onde descartar seus resíduos de forma responsável <Link className={style.link} to="/ListagemLCR">clicando aqui.</Link></h3>
+                        <h3>Saiba onde descartar seus resíduos de forma responsável <Link className={style.link} to="/ListagemLCR">clicando aqui.</Link></h3>
                     </div>
 
                     <div className={style.locals}>
