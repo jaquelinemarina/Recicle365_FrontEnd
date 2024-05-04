@@ -73,31 +73,6 @@ function ListagemLCR() {
             <div className={style.titleList}>
                 <h1>Locais de Coleta de Resíduos</h1>
                 <div className={style.localsContent}>
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br /> <br /> <br />  <br /> <br /> <br />
-                    <br/> <br />
                     {!!locals && Array.isArray(locals) && locals.map((local) => (
                         <div key={local.id} className={style.localList}>
                             <h2>{local.name}</h2>
