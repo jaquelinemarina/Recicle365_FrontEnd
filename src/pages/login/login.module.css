@@ -160,7 +160,9 @@ input::placeholder {
 .btnLogin:hover {
     background-color: var(--steelBlue);
     color: var(--whiteSmoke);
+    transition: .3s;
 }
 .link:hover {
     color: var(--steelBlue);
+    transition: .3s;
 }
