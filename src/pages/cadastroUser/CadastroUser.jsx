@@ -249,7 +249,7 @@ function CadastroUser() {
             </form>
             <div className={style.registerUser}>
                 <button type='submit' className={style.btnRegister}>Cadastrar</button>
-                <p>Já se cadastrou? <Link className={style.linkUser} to="/Login">Faça login</Link></p> {/* solução temporária para o redirecionamento */}
+                <p>Já se cadastrou? <Link className={style.linkUser} to="/">Faça login</Link></p> {/* solução temporária para o redirecionamento */}
             </div>
         </div>
     )

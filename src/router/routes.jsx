@@ -21,7 +21,7 @@ const PrivateRoute = ({ children }) => {
 const routers = createBrowserRouter([
 
     {
-        path: '/login',
+        path: '/',
         element: <Login />,
     },
     {
@@ -38,7 +38,7 @@ const routers = createBrowserRouter([
         ),
         children: [
             {
-                path: '/',
+                path: '/dashboard',
                 element: <Dashboard />,
             },
             {
