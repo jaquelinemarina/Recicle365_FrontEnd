@@ -71,12 +71,12 @@
 }
 
 .btnEdit, .btnDelete{
-    background-color: var(--steelBlue);
-    color: var(--eerieBlack);
-    border: none;
+    background-color: var(--eerieBlack);
+    border: solid 1px var(--steelBlue);
+   color: var(--steelBlue);
     height: 2.3em;
     width: 7em;
-    padding: .5em;
+    padding: .4em;
     border-radius: 5px;
     font-size: 14px;
     font-weight: bold;
@@ -149,12 +149,12 @@
 }
 
 .btnSave, .btnCancel {
-    background-color: var(--yellowGreen);
-    color: var(--eerieBlack);
-    border: none;
+    border: solid 1px var(--yellowGreen);
+    background-color: var(--eerieBlack);
+    color: var(--yellowGreen);
     height: 2.3em;
     width: 7em;
-    padding: .5em;
+    padding: .4em;
     border-radius: 5px;
     font-size: 14px;
     font-weight: bold;
@@ -164,13 +164,11 @@
 }
 
 .btnEdit:hover, .btnDelete:hover {
-    background-color: var(--raspbarry);
-    color: var(--whiteSmoke);
+    color: var(--raspbarry);
     transition: .3s;
 }
 
 .btnSave:hover, .btnCancel:hover {
-    background-color: var(--ultraViolet);
-    color: var(--whiteSmoke);
+    color: var(--ultraViolet);
     transition: .3s;
 }
