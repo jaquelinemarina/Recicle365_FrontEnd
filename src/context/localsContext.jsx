@@ -24,9 +24,8 @@ export const LocalsContextProvider = ({ children }) => {
 
     //cadastrar novo local no json
     function registerLocal(local) {
-        if (local.cpf === "" || local.name === "" || local.description === "" || local.cep === "" || local.address === "" ||
-            local.neighborhood === "" || local.city === "" || local.state === "" || local.coordinates === "" || local.type === "") {
-
+        if (local.cpf === "" || local.name === "" || local.cep === "" || local.address === "" ||
+            local.neighborhood === "" || local.city === "" || local.state === "" || local.type === "") {
 
             console.log('Dados incompletos. Por favor, preencha todos os campos obrigatórios.')
             return //retorna para evitar o envio de dados vazios
