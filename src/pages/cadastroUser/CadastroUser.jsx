@@ -1,16 +1,14 @@
 import style from './cadastroUser.module.css'
 import { useForm } from 'react-hook-form'
 import { UsersContext } from '../../context/usersContext'
-import { useContext, useState, useEffect } from 'react'
+import { useContext} from 'react'
 import { Link } from "react-router-dom"
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.png'        
 
-//-------------------------------------------------------------------------------
+//--------------------------------------------------
 // O QUE FALTA:
-// - usar dados da API ViaCEP para preenchimento automaticamatico - NÃO FUNCIONA
-// EXTRAS:
 // - impedir que o input type="text" aceite numeros
-// ------------------------------------------------------------------------------
+// -------------------------------------------------
 
 function CadastroUser() {
 
@@ -74,7 +72,7 @@ function CadastroUser() {
                             maxLength: { value: 60, message: "Máximo 60 caracteres" },
                         })}
                     />
-                    {errors?.name && <p>{errors.name.message}</p>}
+                    {errors?.name && <p className={style.error}>{errors.name.message}</p>}
                 </div>
 
                 <div className={style.cpf}>
@@ -87,7 +85,7 @@ function CadastroUser() {
                             maxLength: { value: 11, message: "Máximo 11 caracteres" },
                         })}
                     />
-                    {errors?.cpf && <p>{errors.cpf.message}</p>}
+                    {errors?.cpf && <p className={style.error}>{errors.cpf.message}</p>}
                 </div>
 
 
@@ -101,7 +99,7 @@ function CadastroUser() {
                             maxLength: { value: 8, message: "Máximo 8 caracteres" },
                         })}
                     />
-                    {errors?.born && <p>{errors.born.message}</p>}
+                    {errors?.born && <p className={style.error}>{errors.born.message}</p>}
                 </div>
 
                 <div className={style.email}>
@@ -114,9 +112,8 @@ function CadastroUser() {
                             maxLength: { value: 60, message: "Máximo 60 caracteres" },
                         })}
                     />
-                    {errors?.email && <p>{errors.email.message}</p>}
+                    {errors?.email && <p className={style.error}>{errors.email.message}</p>}
                 </div>
-
 
                 <div className={style.cep}>
                     <label htmlFor="cep">CEP</label>
@@ -129,7 +126,7 @@ function CadastroUser() {
                             maxLength: { value: 9, message: "Máximo 9 caracteres" },
                         })}
                     />
-                    {errors?.cep && <p>{errors.cep.message}</p>}
+                    {errors?.cep && <p className={style.error}>{errors.cep.message}</p>}
                 </div>
 
                 <div className={style.sex}>
@@ -143,7 +140,7 @@ function CadastroUser() {
                         <option value="Mulher">Mulher</option>
                         <option value="Vazio">Prefiro não responder</option>
                     </select>
-                    {errors?.sex && <p>{errors.sex.message}</p>}
+                    {errors?.sex && <p className={style.error}>{errors.sex.message}</p>}
                 </div>
 
                 <div className={style.address}> {/* usar dados da API ViaCEP - provavelmente para preenchimento automático */}
@@ -156,7 +153,7 @@ function CadastroUser() {
                             maxLength: { value: 60, message: "Máximo 60 caracteres" },
                         })}
                     />
-                    {errors?.address && <p>{errors.address.message}</p>}
+                    {errors?.address && <p className={style.error}>{errors.address.message}</p>}
                 </div>
 
                 <div className={style.number}>
@@ -169,7 +166,7 @@ function CadastroUser() {
                             maxLength: { value: 5, message: "Máximo 5 caracteres" },
                         })}
                     />
-                    {errors?.number && <p>{errors.number.message}</p>}
+                    {errors?.number && <p className={style.error}>{errors.number.message}</p>}
 
                 </div>
                 <div className={style.password}>
@@ -181,7 +178,7 @@ function CadastroUser() {
                             minLength: { value: 6, message: "Mínimo 6 caracteres" },
                         })}
                     />
-                    {errors?.password && <p>{errors.password.message}</p>}
+                    {errors?.password && <p className={style.error}>{errors.password.message}</p>}
                 </div>
 
                 <div className={style.neighborhood}>
@@ -194,7 +191,7 @@ function CadastroUser() {
                             maxLength: { value: 60, message: "Máximo 60 caracteres" },
                         })}
                     />
-                    {errors?.neighborhood && <p>{errors.neighborhood.message}</p>}
+                    {errors?.neighborhood && <p className={style.error}>{errors.neighborhood.message}</p>}
                 </div>
 
                 <div className={style.city}>
@@ -206,7 +203,7 @@ function CadastroUser() {
                             minLength: { value: 3, message: "Insira um nome válido." },
                             maxLength: { value: 60, message: "Máximo 60 caracteres." },
                         })} />
-                    {errors?.city && <p>{errors.city.message}</p>}
+                    {errors?.city && <p  className={style.error}>{errors.city.message}</p>}
                 </div>
 
                 <div className={style.state}>
@@ -244,14 +241,14 @@ function CadastroUser() {
                         <option value="SE">SE</option>
                         <option value="TO">TO</option>
                     </select>
-                    {errors?.state && <p>{errors.state.message}</p>}
+                    {errors?.state && <p className={style.error}>{errors.state.message}</p>}
                 </div>
 
-            </form>
             <div className={style.registerUser}>
                 <button type='submit' className={style.btnRegister}>Cadastrar</button>
                 <p>Já se cadastrou? <Link className={style.linkUser} to="/">Faça login</Link></p> {/* solução temporária para o redirecionamento */}
             </div>
+            </form>
         </div>
     )
 }
