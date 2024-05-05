@@ -2,7 +2,7 @@
     display: flex;
     align-items: top;
     padding: 5em;
-    gap: 10em;
+    gap: 11em;
     background-color: var(--eerieBlack);
     height: 100vh;
 }
@@ -11,7 +11,7 @@
     font-size: 24px;
     margin-top: 2.8em;
     margin-bottom: -2em;
-    margin-left: 4em;
+    margin-left: 5em;
     font-family: "Poiret One", sans-serif;
     letter-spacing: .2em;
     color: var(--raspbarry);
@@ -23,7 +23,7 @@
     align-items: center;
     text-align: center;
     margin-top: 5em;
-    margin-left: 4em;
+    margin-left: 5em;
     overflow: auto;
     overflow-x: hidden;
     height: 50vh;
@@ -76,7 +76,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 45vw;
+    width: 40vw;
     height: 40vw;
     border: solid 1px var(--yellowGreen);
     border-radius: 10px;
