@@ -103,9 +103,10 @@ h3 {
 }
 
 .card h3 {
-    margin-top: 1em;
+    margin-top: .5em;
     margin-bottom: .1em;
     color: var(--eerieBlack);
+    letter-spacing: .1em;
     font-weight: 900;
 }
 
