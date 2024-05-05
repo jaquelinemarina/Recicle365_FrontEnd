@@ -7,7 +7,7 @@ function Map() {
     const position2 = [-27.596991961607397, -48.55320076179115]
     const position3 = [-27.5998619888946, -48.51941520411855]
     const position4 = [-27.569793286086057, -48.53723017404106]
-    const position5 = [-27.5789506202227, -48.50862964830014]
+    const position5 = [-27.578941110464086, -48.50851163110259]
     const position6 = [-27.59729711741571, -48.5497331374643]
     const position7 = [-27.599690472831547, -48.51142904829937]
 
@@ -25,22 +25,22 @@ function Map() {
                 <Popup> Beira Mar Norte <br />(vidro, papel e plástico)</Popup>
             </Marker>
             <Marker position={position2}>
-                <Popup> Mercado Público <br />(papel, plástico, metal, vidro, e orgânico)</Popup>
+                <Popup> Mercado Público <br />(papel, plástico e vidro)</Popup>
             </Marker>
             <Marker position={position3}>
                 <Popup>UFSC<br />(baterias e plástico)</Popup>
             </Marker>
             <Marker position={position4}>
-                <Popup>Ponta do Coral<br />(papel, plástico e metal)</Popup>
+                <Popup>Ponta do Coral<br />(papel, orgânico e metal)</Popup>
             </Marker>
             <Marker position={position5}>
-                <Popup>Ponta do Coral<br />(papel, plástico e metal)</Popup>
+                <Popup>Jardim Botânico<br />(papel, plástico e orgânico)</Popup>
             </Marker>
             <Marker position={position6}>
                 <Popup>Praça XV<br />(plástico e vidro)</Popup>
             </Marker>
             <Marker position={position7}>
-                <Popup>Parque Ecológico do Córrego Grande<br />(papel, plástico, metal e vidro)</Popup>
+                <Popup>Parque do Córrego Grande<br />(metal e vidro)</Popup>
             </Marker>
         </MapContainer>
     )
