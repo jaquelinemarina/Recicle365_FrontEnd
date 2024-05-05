@@ -35,7 +35,8 @@ function CadastroUser() {
                 ...formValue,
                 cpf: Number(formValue.cpf),
                 number: Number(formValue.number),
-                cep: Number(formValue.cep)
+                cep: Number(formValue.cep),
+                born: Number(formValue.born)
             })
         }
     }
@@ -93,7 +94,7 @@ function CadastroUser() {
                 <div className={style.born}>
                     <label htmlFor="born">Data de nascimento</label>
                     <input placeholder="digite sua data de nascimento"
-                        type="datetime"
+                        type="number"
                         {...register("born", {
                             required: "Campo obrigatório.",
                             minLength: { value: 8, message: "Insira uma data válida" },
