@@ -14,7 +14,7 @@ import CadastroLCR from '../pages/cadastroLCR/CadastroLCR'
 let isAuthenticaded = JSON.parse(localStorage.getItem('isAuthenticaded')) || false
 
 const PrivateRoute = ({ children }) => {
-    return isAuthenticaded ? children : <Navigate to="/login" />
+    return isAuthenticaded ? children : <Navigate to='/' />
 }
 
 

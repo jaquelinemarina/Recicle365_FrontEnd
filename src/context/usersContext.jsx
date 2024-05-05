@@ -72,7 +72,7 @@ export const UsersContextProvider = ({ children }) => {
 
                     if (user.password == password) {
                         localStorage.setItem('isAuthenticaded', true) //salva no local storage o status de user autenticado
-                        window.location.href = "/" //redireciona a página
+                        window.location.href = "/dashboard" //redireciona a página
                         return
                     }
                     alert("Senha incorreta!")
