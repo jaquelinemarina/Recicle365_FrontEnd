@@ -17,21 +17,6 @@ function CadastroLCR() {
 
     const { registerLocal } = useContext(LocalsContext)
 
-    // estado para armazenar os valores do formulário
-    const [newUser, setNewUser] = useState({
-        cpf: "",
-        name: "",
-        description: "",
-        cep: "",
-        address: "",
-        number: "",
-        neighborhood: "",
-        city: "",
-        state: "",
-        coordinates: "",
-        type: ""
-    })
-
     // função para buscar o CEP na API ViaCEP
     const checkCEP = () => {
         const cep = getValues('cep')
