@@ -64,7 +64,7 @@ function CadastroLCR() {
                             maxLength: { value: 11, message: "Máximo 11 caracteres" },
                         })}
                     />
-                    {errors?.cpf && <p>{errors.cpf.message}</p>}
+                    {errors?.cpf && <p className={style.error}>{errors.cpf.message}</p>}
                 </div>
 
                 <div className={style.name}>
@@ -77,7 +77,7 @@ function CadastroLCR() {
                             maxLength: { value: 60, message: "Máximo 60 caracteres" },
                         })}
                     />
-                    {errors?.name && <p>{errors.name.message}</p>}
+                    {errors?.name && <p className={style.error}>{errors.name.message}</p>}
                 </div>
 
                 <div className={style.description}>
@@ -88,7 +88,7 @@ function CadastroLCR() {
                             maxLength: { value: 60, message: "Máximo 60 caracteres" },
                         })}
                     />
-                    {errors?.description && <p>{errors.description.message}</p>}
+                    {errors?.description && <p className={style.error}>{errors.description.message}</p>}
                 </div>
 
 
@@ -103,7 +103,7 @@ function CadastroLCR() {
                             maxLength: { value: 9, message: "Máximo 9 caracteres" },
                         })}
                     />
-                    {errors?.cep && <p>{errors.cep.message}</p>}
+                    {errors?.cep && <p className={style.error}>{errors.cep.message}</p>}
                 </div>
 
                 <div className={style.address}> {/* usar dados da API ViaCEP - provavelmente para preenchimento automático */}
@@ -116,7 +116,7 @@ function CadastroLCR() {
                             maxLength: { value: 60, message: "Máximo 60 caracteres" },
                         })}
                     />
-                    {errors?.address && <p>{errors.address.message}</p>}
+                    {errors?.address && <p className={style.error}>{errors.address.message}</p>}
                 </div>
 
                 <div className={style.number}>
@@ -129,7 +129,7 @@ function CadastroLCR() {
                             maxLength: { value: 5, message: "Máximo 5 caracteres" },
                         })}
                     />
-                    {errors?.number && <p>{errors.number.message}</p>}
+                    {errors?.number && <p className={style.error}>{errors.number.message}</p>}
                 </div>
 
                 <div className={style.neighborhood}>
@@ -142,7 +142,7 @@ function CadastroLCR() {
                             maxLength: { value: 60, message: "Máximo 60 caracteres" },
                         })}
                     />
-                    {errors?.neighborhood && <p>{errors.neighborhood.message}</p>}
+                    {errors?.neighborhood && <p className={style.error}>{errors.neighborhood.message}</p>}
                 </div>
 
                 <div className={style.city}>
@@ -154,7 +154,7 @@ function CadastroLCR() {
                             minLength: { value: 3, message: "Insira um nome válido." },
                             maxLength: { value: 60, message: "Máximo 60 caracteres." },
                         })} />
-                    {errors?.city && <p>{errors.city.message}</p>}
+                    {errors?.city && <p className={style.error}>{errors.city.message}</p>}
                 </div>
 
                 <div className={style.state}>
@@ -192,7 +192,7 @@ function CadastroLCR() {
                         <option value="SE">SE</option>
                         <option value="TO">TO</option>
                     </select>
-                    {errors?.state && <p>{errors.state.message}</p>}
+                    {errors?.state && <p className={style.error}>{errors.state.message}</p>}
                 </div>
 
 
@@ -204,7 +204,7 @@ function CadastroLCR() {
                             maxLength: { value: 60, message: "Máximo 60 caracteres" }
                         })}
                     />
-                    {errors?.coordinates && <p>{errors.coordinates.message}</p>}
+                    {errors?.coordinates && <p className={style.error}>{errors.coordinates.message}</p>}
                 </div>
 
                 <h3 className={style.typeTitle}>Tipos de resíduos aceitos:</h3>
@@ -213,40 +213,40 @@ function CadastroLCR() {
                     <div className={style.typeInput}>
                         <input type="checkbox" value="plástico"
                             {...register('type', {
-                                required: 'Por favor, selecione pelo menos uma opção.'
+                                required: 'Por favor, selecione uma opção.'
                             })} />
 
                         <input type="checkbox" value="metal"
                             {...register('type', {
-                                required: 'Por favor, selecione pelo menos uma opção.'
+                                required: 'Por favor, selecione uma opção.'
                             })} />
 
                         <input type="checkbox" value="vidro"
                             {...register('type', {
-                                required: 'Por favor, selecione pelo menos uma opção.'
+                                required: 'Por favor, selecione uma opção.'
                             })} />
 
                         <input type="checkbox" value="papel"
                             {...register('type', {
-                                required: 'Por favor, selecione pelo menos uma opção.'
+                                required: 'Por favor, selecione uma opção.'
                             })} />
 
                         <input type="checkbox" value="baterias"
                             {...register('type', {
-                                required: 'Por favor, selecione pelo menos uma opção.'
+                                required: 'Por favor, selecione uma opção.'
                             })} />
 
                         <input type="checkbox" value="orgânico"
                             {...register('type', {
-                                required: 'Por favor, selecione pelo menos uma opção.'
+                                required: 'Por favor, selecione uma opção.'
                             })} />
 
                         <input type="checkbox" value="outros"
                             {...register('type', {
-                                required: 'Por favor, selecione pelo menos uma opção..'
+                                required: 'Por favor, selecione uma opção.'
                             })} />
 
-                        {errors?.type && <p>{errors.type.message}</p>}
+                        {errors?.type && <p className={style.errorType}>{errors.type.message}</p>}
                     </div>
 
                     <div className={style.typeLabel}>
