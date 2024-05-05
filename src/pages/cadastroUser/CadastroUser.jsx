@@ -133,7 +133,7 @@ function CadastroUser() {
                     <label htmlFor="sex">Sexo</label>
                     <select className={style.selectUser} name="sex" id="sex"
                         {...register("sex", {
-                            required: "Campo obrigatório."
+                            required: "Por favor, selecione uma opção."
                         })}>
                         <option value="">selecione uma opção</option>
                         <option value="Homem">Homem</option>
